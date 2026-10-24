@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thông báo · CultureTrail</title>
+<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/notifications.css">
+</head>
+<body data-page="notifications" data-auth="required">
+<main>
+<p class="eyebrow">CẬP NHẬT CỦA BẠN</p>
+<div class="page-head"><div><h1>Thông báo</h1><p class="lede">Theo dõi hành trình, nội dung và những cuộc hẹn với văn hóa.</p></div><button class="btn" id="readAll" type="button">＋ Đánh dấu đã đọc</button></div>
+<div class="searchbar"><div class="field"><label class="sr-only" for="q">Tìm thông báo</label><input id="q" type="search" placeholder="⌕ Tìm thông báo…"></div><button class="link-btn" id="sort" type="button">Mới cập nhật ↓</button></div>
+<div class="tabs" role="tablist" id="tabs" aria-label="Lọc thông báo"></div>
+<div id="list" aria-live="polite"></div>
+<p class="mt row"><button class="link-btn" id="older" type="button">Xem thông báo cũ hơn</button><a class="small pg-1" href="account-settings.html#notifications">Cài đặt thông báo →</a></p>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/notifications.js"></script>
+</body>
+</html>

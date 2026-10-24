@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trang chủ · CultureTrail</title>
+<meta name="description" content="CultureTrail: khám phá văn hóa địa phương qua câu chuyện của người trong cuộc.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/index.css">
+</head>
+<body data-page="index">
+<main>
+<section class="hero" aria-labelledby="hero-h">
+  <div>
+    <p class="eyebrow">KHÁM PHÁ VĂN HÓA THEO CÂU CHUYỆN</p>
+    <h1 id="hero-h">Đi qua một nơi. Hiểu thêm một đời.</h1>
+    <p class="lede">Từ bàn xoay gốm Bát Tràng đến ánh đèn Hội An, gặp những con người gìn giữ văn hóa — và viết nên hành trình của riêng bạn.</p>
+    <div class="actions"><a class="btn" href="explorer-story-discovery.html">→ Bắt đầu khám phá</a><a class="btn btn-ghost" href="explorer-ai-trail-generator.html">Tạo hành trình cùng AI</a></div>
+    <p class="small muted mt">Câu chuyện địa phương · Nghệ nhân kể · Bạn khám phá</p>
+  </div>
+  <figure class="pg-1">
+    <div class="media tall pg-2"><img src="assets/images/clay.svg" alt="Ảnh minh họa: đôi tay nghệ nhân đang tạo hình chiếc bình gốm trên bàn xoay"><figcaption>Ảnh minh họa</figcaption></div>
+    <div class="row between small mt"><span class="dot clay">Câu chuyện nổi bật</span><span class="muted">Bát Tràng, Hà Nội · 8 phút đọc</span></div>
+    <h2 class="pg-3"><a class="pg-4" href="explorer-story-detail.html?id=s1">Bàn tay giữ hồn đất ↗</a></h2>
+  </figure>
+</section>
+<div class="band">
+  <div><h2>Lắng nghe</h2><p>Văn hóa qua lời người trong cuộc</p></div>
+  <div><h2>Kết nối</h2><p>Câu chuyện, địa danh và sự kiện</p></div>
+  <div><h2>Lên đường</h2><p>Hành trình được bạn tự lựa chọn</p></div>
+</div>
+<section class="section" aria-labelledby="h-st">
+  <div class="section-head"><div><p class="eyebrow">NHỮNG ĐIỀU ĐÁNG LẮNG NGHE</p><h2 id="h-st">Câu chuyện từ những miền đất</h2></div><a class="btn btn-ghost" href="explorer-story-discovery.html">Xem tất cả câu chuyện</a></div>
+  <div id="featured" aria-live="polite"></div>
+</section>
+<section class="feature" id="collection" aria-labelledby="h-col"></section>
+<section class="section" aria-labelledby="h-steps">
+  <h2 class="pg-5" id="h-steps">Một hành trình bắt đầu từ sự tò mò</h2>
+  <div class="grid g3 steps">
+    <div class="card"><div class="num">01</div><h3 class="sans">Chọn câu chuyện</h3><p class="muted mb0">Tìm theo chủ đề, vùng miền hoặc điều bạn đang muốn hiểu.</p></div>
+    <div class="card"><div class="num">02</div><h3 class="sans">Ghé một địa danh</h3><p class="muted mb0">Đọc bối cảnh, xem sự kiện và thông tin trước khi đến.</p></div>
+    <div class="card"><div class="num">03</div><h3 class="sans">Lưu hành trình</h3><p class="muted mb0">Sắp xếp điểm dừng. AI gợi ý, bạn là người quyết định.</p></div>
+  </div>
+</section>
+<section class="cta-band" aria-labelledby="h-cta">
+  <div><h2 id="h-cta">Bạn có một câu chuyện để kể?</h2><p>Chia sẻ câu chuyện về nghề, người và nơi bạn gắn bó.</p></div>
+  <a class="btn btn-outline" href="register.html?role=creator">Đăng ký nhà sáng tạo</a>
+</section>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/index.js"></script>
+</body>
+</html>

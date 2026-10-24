@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tạo hành trình cùng AI · CultureTrail</title>
+<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/explorer-ai-trail-generator.css">
+</head>
+<body data-page="explorer-ai-trail-generator" data-auth="required">
+<main>
+<p class="eyebrow">AI GỢI Ý · BẠN LỰA CHỌN</p>
+<h1>Một hành trình vừa với bạn</h1>
+<p class="lede">Kết nối các địa danh từ sở thích của bạn. Kiểm tra và chỉnh sửa trước khi lưu.</p>
+<ol class="stepper mt" id="stepper" aria-label="Các bước"><li class="pg-1"><span class="on">1 · Sở thích</span></li><li class="pg-1"><span>2 · Gợi ý & giải thích</span></li><li class="pg-1"><span>3 · Chỉnh sửa & lưu</span></li></ol>
+<div class="split pg-2">
+  <div class="stack">
+    <form class="card" id="gf" novalidate><h2 class="panel-title">Bạn muốn đi đâu?</h2>
+      <div class="form-stack">
+        <div class="field"><label for="city">Thành phố *</label><select id="city" name="city"><option value="">Chọn thành phố</option><option>Hà Nội</option><option>Hội An</option><option>Huế</option></select><span class="msg"></span></div>
+        <div class="field"><label for="topic">Chủ đề *</label><select id="topic" name="topic"><option value="">Chọn chủ đề</option><option value="craft">Nghề thủ công</option><option value="heritage">Di sản & kiến trúc</option><option value="food">Ẩm thực</option><option value="festival">Lễ hội</option></select><span class="msg"></span></div>
+        <div class="field"><label for="hours">Thời gian có thể dành *</label><select id="hours" name="hours"><option value="2">2 giờ</option><option value="3" selected>3 giờ</option><option value="4">4 giờ</option></select></div>
+        <div class="field"><label for="period">Buổi trong ngày</label><select id="period" name="period"><option value="morning">Buổi sáng</option><option value="afternoon">Buổi chiều</option><option value="evening">Buổi tối</option></select></div>
+        <div class="field"><label for="prio">Ưu tiên của bạn</label><input id="prio" name="prio" placeholder="Ví dụ: gặp nghệ nhân, thử làm gốm"></div>
+        <label class="check"><input type="checkbox" name="slow" checked> Nhịp đi chậm</label>
+        <label class="check"><input type="checkbox" name="workshop" checked> Ưu tiên trải nghiệm trong xưởng</label>
+        <label class="check"><input type="checkbox" name="free"> Chỉ chọn điểm miễn phí</label>
+        <button class="btn" type="submit" id="gen">✦ Tạo gợi ý</button>
+        <p class="small muted mb0">Không gửi thông tin cá nhân nhạy cảm. AI dùng danh sách địa danh mẫu có sẵn.</p>
+      </div></form>
+    <section class="card hidden" id="why"></section>
+  </div>
+  <div id="out" aria-live="polite"><div class="state-box"><h3>Chọn sở thích để bắt đầu</h3><p>Điền thành phố và chủ đề, AI sẽ gợi ý một hành trình mẫu. Bạn kiểm tra, chỉnh sửa rồi mới lưu.</p></div></div>
+</div>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/explorer-ai-trail-generator.js"></script>
+</body>
+</html>
