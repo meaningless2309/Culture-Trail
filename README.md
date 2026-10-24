@@ -65,9 +65,10 @@ docs/                 kiểm kê màn hình, vai trò & tính năng, báo cáo A
 ## Chưa có / nhóm cần tự bổ sung
 
 Những mục sau là **hoạt động của nhóm**, không thể sinh trong mã nguồn:
+- FIGMA: https://www.figma.com/design/WdIYXfLxl9EuLsQL4P2Nmv/CultureTrail?node-id=0-1&t=VLdekIJDp00kvEKn-1
+- Github: https://github.com/meaningless2309/Culture-Trail
+- Video OBS
 
-- Bản mô phỏng Figma/Canva (`design/`), lịch sử Git + nhánh + PR, bảng Trello/Jira/Notion, **video OBS cho từng trang**, phân công/commit từng sinh viên.
-- Điền `docs/ai-usage-report.md` đúng thực tế sử dụng AI của nhóm (đề bài bắt buộc khai báo).
 
 Giới hạn kỹ thuật cần biết:
 
