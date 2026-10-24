@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hàng đợi duyệt nội dung · CultureTrail</title>
+<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/curator-content-review.css">
+</head>
+<body data-page="curator-content-review" data-space="curator" data-nav="review">
+<main>
+<div class="page-head"><div><p class="eyebrow">BIÊN TẬP VĂN HÓA</p><h1>Hàng đợi duyệt nội dung</h1><p class="lede">Đọc kỹ nguồn, kiểm tra bối cảnh và trả phản hồi rõ ràng cho người kể chuyện.</p></div></div>
+<div class="stats" id="stats"></div>
+<div class="searchbar"><div class="field"><label class="sr-only" for="q">Tìm nội dung</label><input id="q" type="search" placeholder="⌕ Tiêu đề, tác giả hoặc địa danh…"></div><button class="link-btn" id="sort" type="button">Mới cập nhật ↓</button></div>
+<div class="tabs" id="tabs" role="tablist" aria-label="Lọc theo trạng thái"></div>
+<div class="filters"><div class="field"><label for="ftype">Loại nội dung</label><select id="ftype"><option>Câu chuyện</option></select></div><div class="field"><label for="freg">Vùng miền</label><select id="freg"><option value="">Tất cả</option></select></div><div class="field"><label for="fas">Người phụ trách</label><select id="fas"><option value="">Tất cả</option><option value="me">Tôi</option><option value="none">Chưa nhận</option></select></div></div>
+<div id="list" aria-live="polite"></div>
+<div class="pager" id="pager"></div>
+<div class="notice notice--ok mt"><strong>Quyết định luôn do biên tập viên thực hiện</strong><p>AI chỉ gợi ý thẻ từ nội dung. Không tự duyệt, không thay thế việc xác minh nguồn và không tự gán thông tin lịch sử.</p></div>
+<div class="grid g2 mt"><section class="card"><h2 class="panel-title">Nguyên tắc duyệt</h2><ol class="small pg-1"><li>Đọc toàn bộ nội dung và kiểm tra nguồn.</li><li>Kiểm tra địa danh, ảnh và quyền sử dụng.</li><li>Chấp nhận / sửa thẻ gợi ý nếu phù hợp.</li><li>Duyệt hoặc trả bài với lý do cụ thể.</li></ol></section><section class="card" id="cont"></section></div>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/curator-content-review.js"></script>
+</body>
+</html>

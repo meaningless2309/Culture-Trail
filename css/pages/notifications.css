@@ -1,0 +1,9 @@
+/* notifications.css — CSS riêng của trang notifications.html (thêm sau base/layout/components/responsive). */
+
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{color:var(--muted)} /* a.small */
+.pg-2.pg-2{font-size:19px;font-family:var(--sans);font-weight:600;margin:10px 0 6px} /* h2 */
+.pg-3.pg-3{margin-top:0} /* div.actions */
+.pg-4.pg-4{color:var(--muted);text-decoration:none} /* button.link-btn */

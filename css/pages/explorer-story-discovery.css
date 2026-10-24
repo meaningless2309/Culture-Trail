@@ -1,0 +1,17 @@
+/* explorer-story-discovery.css — CSS riêng của trang explorer-story-discovery.html (thêm sau base/layout/components/responsive). */
+
+.filter-side h2{font:600 22px var(--sans)}
+.filter-side fieldset{border:0;padding:0;margin:var(--s3) 0}
+.filter-side legend{font-weight:600;padding:0;margin-bottom:6px}
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{border-color:var(--forest)} /* div.field */
+.pg-2.pg-2{grid-template-columns:260px minmax(0,1fr);margin-top:24px} /* div.split */
+.pg-3.pg-3{font-size:20px} /* h3 */
+.pg-4.pg-4{border:0;background:none;font:600 14px var(--sans);color:var(--forest)} /* select#sort.link-btn */
+.pg-5.pg-5{margin-top:32px} /* section#collections.card */
+.pg-6.pg-6{color:var(--muted);text-decoration:none} /* button#clr2.link-btn */
+.pg-7.pg-7{width:120px} /* div */
+.pg-8.pg-8{font-size:24px;margin:4px 0} /* h3 */
+.pg-9.pg-9{margin:0} /* div.actions */

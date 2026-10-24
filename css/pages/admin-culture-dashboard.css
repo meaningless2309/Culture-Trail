@@ -1,0 +1,12 @@
+/* admin-culture-dashboard.css — CSS riêng của trang admin-culture-dashboard.html (thêm sau base/layout/components/responsive). */
+
+.bar{display:grid;grid-template-columns:1fr auto;gap:2px 8px;font-size:14px;margin-bottom:var(--s3)}
+.bar .track{grid-column:1/-1;height:10px;background:var(--leaf);border-radius:5px;overflow:hidden}
+.bar .track i{display:block;height:100%;background:var(--forest);border-radius:5px}
+.chart svg{width:100%;height:auto}
+.chart text{font:12px var(--sans);fill:var(--muted)}
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{grid-template-columns:1fr 1fr auto auto;align-items:end} /* form#ff.filters */
+.pg-2.pg-2{font:600 15px var(--sans)} /* b */

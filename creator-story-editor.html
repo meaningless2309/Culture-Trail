@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soạn câu chuyện · CultureTrail</title>
+<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/creator-story-editor.css">
+</head>
+<body data-page="creator-story-editor" data-space="creator" data-nav="stories">
+<main>
+<p class="crumbs"><a href="creator-story-management.html">Câu chuyện</a> / <span id="bc">Mới</span> / Chỉnh sửa</p>
+<p class="eyebrow" id="ver">PHIÊN BẢN 1 · BẢN NHÁP</p>
+<h1>Kể một câu chuyện của bạn</h1>
+<p class="lede">Mỗi chi tiết nhỏ đều có thể mở ra một góc nhìn về văn hóa địa phương.</p>
+<div id="banner" class="mt"></div>
+<form id="f" novalidate class="mt">
+<div class="split pg-1">
+  <div class="stack">
+    <div class="card form-stack">
+      <div class="field"><label for="title">Tiêu đề *</label><input id="title" name="title" maxlength="120" autocomplete="off"><span class="hint"><span id="tc">0</span> / 100 ký tự</span><span class="msg"></span></div>
+      <div class="field"><label for="placeId">Địa danh liên kết *</label><select id="placeId" name="placeId"></select><span class="msg"></span></div>
+      <div class="field"><label for="lead">Mô tả ngắn *</label><textarea id="lead" name="lead" rows="3" maxlength="300"></textarea><span class="msg"></span></div>
+      <div class="field"><label for="topic">Chủ đề</label><select id="topic" name="topic"></select></div>
+      <div><p class="lbl pg-2">Nội dung câu chuyện *</p>
+        <div class="editor-bar" role="toolbar" aria-label="Định dạng"><button type="button" data-fmt="h2">H2</button><button type="button" data-fmt="b"><b>B</b></button><button type="button" data-fmt="i"><i>I</i></button><button type="button" data-fmt="list">Danh sách</button><button type="button" data-fmt="img">Chèn ảnh / Nguồn</button></div>
+        <div class="field"><label for="body">Bài viết · <span id="wc">0</span> từ</label><textarea class="pg-3" id="body" name="body" rows="14"></textarea><span class="hint">Dùng “## Tiêu đề mục” để tạo mục; cách một dòng trống giữa các đoạn.</span><span class="msg"></span></div></div>
+      <div><div class="media pg-4" id="cover"></div><p class="actions pg-5"><button class="link-btn" type="button" id="up">Tải ảnh lên</button><span class="small muted">JPG, PNG · tối đa 1 MB trong bản demo</span></p><input type="file" id="file" accept="image/jpeg,image/png" hidden></div>
+      <div class="field"><label for="imageSource">Nguồn ảnh / quyền sử dụng *</label><textarea id="imageSource" name="imageSource" rows="2" placeholder="Nhập nội dung… (tác giả ảnh, nguồn, giấy phép)"></textarea><span class="msg"></span></div>
+      <div class="field"><label for="note">Ghi chú cho biên tập</label><textarea id="note" name="note" rows="3"></textarea></div>
+    </div>
+    <div class="actions"><button class="btn" type="button" id="draft">Lưu bản nháp</button><button class="btn" type="submit" id="send">Gửi duyệt</button><button class="btn btn-ghost" type="button" id="prev">Xem trước</button></div>
+    <p class="small pg-6" id="why"></p>
+  </div>
+  <aside class="stack">
+    <section class="card"><h2 class="panel-title">Trước khi gửi</h2><ul class="check-list" id="chk"></ul><label class="check" id="own"><input type="checkbox" name="own"> Tôi chịu trách nhiệm về nội dung và nguồn cung cấp.</label><span class="msg pg-7"></span>
+      <div class="notice mt"><strong>Tự động lưu</strong><p id="auto">Chưa có thay đổi.</p></div></section>
+    <section class="card" id="aiBox"></section>
+  </aside>
+</div></form>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modules/creator.js"></script>
+<script src="js/pages/creator-story-editor.js"></script>
+</body>
+</html>

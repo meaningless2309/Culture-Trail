@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biên soạn bộ sưu tập · CultureTrail</title>
+<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/curator-collection-editor.css">
+</head>
+<body data-page="curator-collection-editor" data-space="curator" data-nav="collections">
+<main>
+<p class="eyebrow" id="eb">BỘ SƯU TẬP / BẢN NHÁP</p>
+<h1 id="h">Bộ sưu tập mới</h1>
+<p class="lede">Chọn những câu chuyện có liên hệ rõ ràng và sắp xếp một tuyến đọc trọn vẹn.</p>
+<div class="split mt pg-1">
+  <div class="stack">
+    <form class="card" id="f" novalidate aria-labelledby="t1"><h2 id="t1" class="panel-title">Thông tin bộ sưu tập</h2><div class="form-stack">
+      <div class="field"><label for="name">Tên bộ sưu tập *</label><input id="name" name="name" maxlength="80"><span class="msg"></span></div>
+      <div class="field"><label for="desc">Mô tả *</label><textarea id="desc" name="desc" rows="3"></textarea><span class="msg"></span></div>
+      <div><p class="lbl pg-2">Ảnh bìa *</p><div class="chips" id="covers" role="radiogroup" aria-label="Chọn ảnh bìa"></div><p class="small pg-3" id="cmsg">Chọn ảnh bìa trước khi xuất bản.</p><p class="tiny muted">Ảnh minh họa · Thêm chú thích và nguồn khi dùng ảnh thực tế</p></div>
+      <div class="field"><label for="topic">Chủ đề</label><select id="topic" name="topic"></select></div></div></form>
+    <section class="card" aria-labelledby="t2"><h2 id="t2" class="panel-title">Thứ tự câu chuyện</h2><p class="small muted">Dùng ↑ ↓ để sắp xếp. Chỉ nội dung đã duyệt được xuất bản.</p><div id="order"></div>
+      <h3 class="pg-4">Thêm câu chuyện đã duyệt</h3><div class="field"><label for="sq">Tìm trong kho nội dung</label><input id="sq" type="search"></div><div id="pool" class="mt"></div><p class="small muted" id="diff"></p></section>
+    <div class="actions"><button class="btn" type="button" id="draft">Lưu bản nháp</button><button class="btn" type="button" id="pub">Xuất bản phiên bản mới</button><button class="btn btn-ghost" type="button" id="prev">Xem trước</button></div>
+  </div>
+  <aside class="stack"><section class="card"><h2 class="panel-title">Kiểm tra trước xuất bản</h2><p class="dot" id="valid"></p><ul class="check-list" id="chk"></ul><div class="notice"><strong>Giữ bản công khai an toàn</strong><p>Lưu nháp không thay đổi bộ sưu tập đang xuất bản. Chỉ cập nhật khi bạn xác nhận xuất bản phiên bản mới.</p></div></section></aside>
+</div>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/curator-collection-editor.js"></script>
+</body>
+</html>

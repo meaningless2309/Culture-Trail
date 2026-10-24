@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hành trình của tôi · CultureTrail</title>
+<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/explorer-my-trail.css">
+</head>
+<body data-page="explorer-my-trail" data-auth="required">
+<main>
+<p class="eyebrow">NHỮNG CHUYẾN ĐI CỦA BẠN</p>
+<div class="page-head"><div><h1>Hành trình của tôi</h1><p class="lede">Lưu điều bạn muốn khám phá. Sắp xếp các điểm dừng theo nhịp đi của riêng mình.</p></div><button class="btn" id="newT" type="button">＋ Tạo hành trình</button></div>
+<div class="split pg-1">
+  <div class="stack"><section class="card" aria-labelledby="lt"><h2 id="lt" class="panel-title"></h2>
+    <div class="field pg-2"><label for="tq">Tìm trong hành trình</label><input id="tq" type="search" placeholder="Tên hoặc địa phương…"></div>
+    <div id="tlist" class="stack-s"></div><p class="mt mb0"><button class="link-btn" type="button" id="arch">Xem kho lưu trữ →</button></p></section>
+    <a class="btn" href="explorer-ai-trail-generator.html">✦ Tạo cùng AI</a></div>
+  <div id="editor" aria-live="polite"></div>
+</div>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/explorer-my-trail.js"></script>
+</body>
+</html>

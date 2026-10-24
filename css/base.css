@@ -1,0 +1,29 @@
+/* base.css — token màu/chữ/khoảng cách, reset, kiểu chữ. Dùng chung mọi trang. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap');
+
+:root{
+  --paper:#F5F1E8; --surface:#FFFDF7; --forest:#183F34; --clay:#AC5137;
+  --leaf:#E6ECDD; --err:#A43C38; --ink:#22322b; --muted:#5f6963;
+  --line:#E2DDCF; --blush:#F3E0D6; --disabled:#ECE8DD;
+  --r-ctl:6px; --r-card:12px;
+  --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:56px;
+  --serif:'Noto Serif',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Roboto Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:var(--forest);text-underline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--forest);line-height:1.2;margin:0}
+h1{font-size:clamp(32px,4.2vw,48px)}
+h2{font-size:clamp(24px,2.6vw,30px)}
+h3{font-size:20px}
+.card h2,.card h3.sans,.panel-title{font-family:var(--sans);font-weight:600;font-size:22px}
+p{margin:0 0 var(--s3)}
+:focus-visible{outline:2px solid var(--clay);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--forest);color:#fff;padding:8px 16px;border-radius:var(--r-ctl);z-index:100}
+.skip:focus{left:8px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

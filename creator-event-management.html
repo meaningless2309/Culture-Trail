@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sự kiện của tôi · CultureTrail</title>
+<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/creator-event-management.css">
+</head>
+<body data-page="creator-event-management" data-space="creator" data-nav="events">
+<main>
+<div class="page-head"><div><p class="eyebrow">KẾT NỐI TẠI ĐỊA PHƯƠNG</p><h1>Sự kiện của tôi</h1><p class="lede">Mời mọi người gặp gỡ, quan sát và trải nghiệm văn hóa cùng bạn.</p></div><a class="btn" href="creator-event-editor.html">＋ Tạo sự kiện</a></div>
+<div class="stats" id="stats"></div>
+<div class="searchbar"><div class="field"><label class="sr-only" for="q">Tìm sự kiện</label><input id="q" type="search" placeholder="⌕ Tên sự kiện hoặc địa điểm…"></div><button class="link-btn" id="sort" type="button">Mới cập nhật ↓</button></div>
+<div class="tabs" id="tabs" role="tablist" aria-label="Lọc theo trạng thái"></div>
+<div id="list" aria-live="polite"></div>
+<p class="small muted" id="cnt"></p>
+<div class="split mt pg-1"><section class="card" id="next"></section><div id="done"></div></div>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modules/creator.js"></script>
+<script src="js/pages/creator-event-management.js"></script>
+</body>
+</html>

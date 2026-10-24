@@ -1,0 +1,22 @@
+/* explorer-story-detail.css — CSS riêng của trang explorer-story-detail.html (thêm sau base/layout/components/responsive). */
+
+.article h2{margin:var(--s5) 0 var(--s3)}
+.article p{font-size:17px;line-height:1.8;max-width:70ch}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li a{display:block;padding:6px 0;font-size:14px;text-decoration:none}
+.toc li a b{color:var(--clay);font-weight:500;margin-right:8px}
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{height:48px;width:60%} /* div.skeleton */
+.pg-2.pg-2{height:320px;margin-top:24px} /* div.skeleton */
+.pg-3.pg-3{margin-top:32px} /* div.state-box */
+.pg-4.pg-4{margin-bottom:12px} /* h1 */
+.pg-5.pg-5{margin:8px 0 12px} /* h1 */
+.pg-6.pg-6{background:var(--forest);color:#fff;padding:0 18px;min-height:44px;border-radius:6px} /* button.btn */
+.pg-7.pg-7{margin-top:6px} /* p.tiny */
+.pg-8.pg-8{margin:0 0 8px} /* h2.panel-title */
+.pg-9.pg-9{margin-bottom:6px} /* h3 */
+.pg-10.pg-10{color:var(--clay)} /* button#fb.link-btn */
+.pg-11.pg-11{margin-bottom:4px} /* h3 */
+.pg-12.pg-12{margin-bottom:24px} /* h2#hm */

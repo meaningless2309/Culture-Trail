@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khám phá câu chuyện · CultureTrail</title>
+<meta name="description" content="Tìm và lọc câu chuyện văn hóa theo chủ đề, vùng miền, thời gian đọc.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/pages/explorer-story-discovery.css">
+</head>
+<body data-page="explorer-story-discovery">
+<main>
+<p class="eyebrow">LẮNG NGHE NHỮNG MIỀN ĐẤT</p>
+<h1>Bạn muốn khám phá điều gì?</h1>
+<p class="lede">Tìm một câu chuyện, gặp một con người và hiểu hơn về nơi mình đi qua.</p>
+<form id="sf" class="searchbar mt" role="search"><div class="field pg-1"><label class="sr-only" for="q">Tìm câu chuyện</label><input id="q" type="search" placeholder="Tìm theo chủ đề, nghệ nhân, địa danh…" autocomplete="off"></div><button class="btn" type="submit">Tìm kiếm</button></form>
+<div id="banner"></div>
+<div class="split pg-2">
+  <div class="stack">
+    <form class="card filter-side" id="ff" aria-label="Bộ lọc"><h2>Bộ lọc</h2>
+      <fieldset><legend>Chủ đề</legend><div id="topics"></div></fieldset>
+      <div class="stack-s"><div class="field"><label for="region">Vùng miền</label><select id="region"><option value="">Tất cả vùng miền</option></select></div>
+      <div class="field"><label for="prov">Tỉnh / thành</label><select id="prov"><option value="">Tất cả địa phương</option></select></div></div>
+      <fieldset><legend>Thời gian đọc</legend><label class="check"><input type="radio" name="rt" value="" checked> Tất cả</label><label class="check"><input type="radio" name="rt" value="10"> Dưới 10 phút</label></fieldset>
+      <div class="actions"><button class="btn" type="submit">Áp dụng bộ lọc</button><button class="btn btn-ghost" type="button" id="clear">Xóa bộ lọc</button></div></form>
+    <div class="card"><h3 class="pg-3">Một nơi gần bạn</h3><p class="muted small">Bát Tràng đang có câu chuyện và sự kiện trải nghiệm mới.</p><a href="explorer-place-detail.html?id=p-bat-trang"><b>Xem địa danh →</b></a></div>
+  </div>
+  <div>
+    <div class="row between"><b id="count" role="status" aria-live="polite"></b><label class="small"><span class="sr-only">Sắp xếp</span><select id="sort" class="link-btn pg-4"><option value="rel">Phù hợp nhất ▾</option><option value="new">Mới nhất</option><option value="fast">Đọc nhanh</option></select></label></div>
+    <div class="chips mt" id="chips" aria-label="Bộ lọc đang bật"></div>
+    <div id="results" class="mt" aria-live="polite"></div>
+    <div class="pager" id="pager"></div>
+  </div>
+</div>
+<section class="card mt pg-5" id="collections" aria-labelledby="hc"><h2 id="hc" class="panel-title">Bộ sưu tập liên quan</h2><div id="cols"></div></section>
+</main>
+<script src="assets/data/seed.js"></script>
+<script src="js/api.js"></script>
+<script src="js/modules/ui.js"></script>
+<script src="js/modules/ai.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages/explorer-story-discovery.js"></script>
+</body>
+</html>
