@@ -1,0 +1,9 @@
+/* account-settings.css — CSS riêng của trang account-settings.html (thêm sau base/layout/components/responsive). */
+
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{grid-template-columns:280px minmax(0,1fr)} /* div.split */
+.pg-2.pg-2{font-size:16px} /* div.stack-s */
+.pg-3.pg-3{text-decoration:none;color:var(--muted)} /* a */
+.pg-4.pg-4{margin-bottom:16px} /* div.field */

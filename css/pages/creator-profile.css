@@ -1,0 +1,17 @@
+/* creator-profile.css — CSS riêng của trang creator-profile.html (thêm sau base/layout/components/responsive). */
+
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{grid-template-columns:310px minmax(0,1fr)} /* div.split */
+.pg-2.pg-2{margin-bottom:16px} /* h2#hg */
+.pg-3.pg-3{grid-template-columns:minmax(0,1fr) 380px} /* div.split */
+.pg-4.pg-4{aspect-ratio:4/5} /* div.media */
+.pg-5.pg-5{margin-bottom:12px} /* div.media */
+.pg-6.pg-6{font-size:22px} /* h3 */
+.pg-7.pg-7{margin:0} /* div.actions */
+.pg-8.pg-8{grid-column:1/-1} /* div */
+.pg-9.pg-9{margin:8px 0} /* h3 */
+.pg-10.pg-10{align-items:flex-start} /* div.row */
+.pg-11.pg-11{width:140px} /* div */
+.pg-12.pg-12{flex:1;min-width:200px} /* div */

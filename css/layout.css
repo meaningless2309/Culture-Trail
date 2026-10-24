@@ -1,0 +1,43 @@
+/* layout.css — header, thanh bên theo vai trò, khung trang, chân trang. Dùng chung mọi trang. */
+
+.site-header{background:var(--surface);border-bottom:1px solid var(--line);min-height:88px;display:flex;align-items:center;gap:var(--s4);padding:0 48px;position:relative;z-index:20}
+.brand{font:600 28px var(--serif);color:var(--forest);text-decoration:none;white-space:nowrap}
+.main-nav{display:flex;gap:var(--s4);margin:0 auto;font-size:14px}
+.main-nav a,.account-nav a,.account-nav summary{color:var(--forest);text-decoration:none;font-size:14px;padding:8px 2px;cursor:pointer}
+.main-nav a[aria-current],.main-nav a:hover{text-decoration:underline;text-decoration-color:var(--clay);text-decoration-thickness:2px}
+.account-nav{display:flex;align-items:center;gap:var(--s3);position:relative}
+.account-nav details{position:relative}
+.account-nav summary{list-style:none}
+.account-nav summary::-webkit-details-marker{display:none}
+.account-nav summary::after{content:' ▾';font-size:10px}
+.role-menu{position:absolute;right:0;top:100%;margin-top:6px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);padding:var(--s2);min-width:230px;box-shadow:0 12px 32px rgba(24,63,52,.12);z-index:30}
+.role-menu a,.role-menu button{display:block;width:100%;text-align:left;background:none;border:0;padding:10px 12px;border-radius:var(--r-ctl);font:inherit;font-size:14px;color:var(--forest);cursor:pointer;text-decoration:none}
+.role-menu a:hover,.role-menu button:hover{background:var(--leaf)}
+.role-menu .group{font-size:12px;color:var(--muted);padding:8px 12px 2px}
+.role-menu hr{border:0;border-top:1px solid var(--line);margin:var(--s2) 0}
+.menu-btn{display:none;margin-left:auto;background:none;border:0;font-size:24px;color:var(--forest);min-width:44px;min-height:44px;cursor:pointer}
+.workspace{display:grid;grid-template-columns:232px 1fr;min-height:calc(100vh - 88px - 80px)}
+.sidebar{background:var(--forest);color:#e9efe6;padding:var(--s4);display:flex;flex-direction:column;gap:var(--s3)}
+.sidebar .ws-title{font-size:12px;letter-spacing:.04em;margin-bottom:var(--s5)}
+.sidebar nav{display:flex;flex-direction:column;gap:6px}
+.sidebar a{color:#e9efe6;text-decoration:none;font-size:15px;padding:10px 14px;border-radius:var(--r-ctl);display:block}
+.sidebar a:hover{background:rgba(255,255,255,.08)}
+.sidebar a[aria-current]{color:#F0C9B5;font-weight:600;position:relative;padding-left:16px}
+.sidebar a[aria-current]::before{content:'';display:inline-block;width:10px;height:10px;border-radius:50%;background:#F0C9B5;margin-right:8px}
+.sidebar .sep{margin-top:var(--s4)}
+.switch-card{margin-top:var(--s3);background:var(--leaf);color:var(--forest);border-radius:var(--r-card);padding:var(--s3)}
+.switch-card strong{display:block;margin-bottom:4px}
+.switch-card a{color:var(--muted)!important;padding:2px 0!important;font-size:13px;display:inline!important}
+.workspace>main{padding:var(--s5) 36px var(--s6);min-width:0}
+.page{max-width:1240px;margin:0 auto;padding:var(--s5) 48px var(--s6)}
+.workspace>main.page{padding:var(--s5) 36px var(--s6);max-width:none;margin:0}
+.page-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s4)}
+.eyebrow{font-size:12px;font-weight:600;color:var(--clay);margin:0 0 var(--s2);letter-spacing:.02em}
+.lede{color:var(--muted);font-size:17px;margin:var(--s2) 0 0;max-width:68ch}
+.crumbs{font-size:13px;color:var(--muted);margin-bottom:var(--s3)}
+.crumbs a{color:var(--muted)}
+.site-footer{background:var(--forest);color:#e9efe6;font-size:13px;padding:var(--s4) 48px;display:flex;gap:var(--s5);flex-wrap:wrap;align-items:center;min-height:80px}
+.site-footer a,.site-footer button{color:#cfe0d4;background:none;border:0;font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+.site-footer .demo{margin-left:auto;display:flex;gap:var(--s3);align-items:center;flex-wrap:wrap}
+.site-footer select{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:4px;font:inherit;padding:4px 6px}
+.site-footer select option{color:#000}

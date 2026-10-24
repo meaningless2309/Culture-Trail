@@ -1,0 +1,18 @@
+/* creator-story-editor.css — CSS riêng của trang creator-story-editor.html (thêm sau base/layout/components/responsive). */
+
+.editor-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--s2)}
+.editor-bar button{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-ctl);padding:0 12px;min-height:36px;font:600 13px var(--sans);cursor:pointer;color:var(--forest)}
+.editor-bar button:hover{background:var(--leaf)}
+.wordline{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{grid-template-columns:minmax(0,1fr) 360px} /* div.split */
+.pg-2.pg-2{font-weight:600;margin:0 0 8px} /* p.lbl */
+.pg-3.pg-3{min-height:280px} /* textarea#body */
+.pg-4.pg-4{aspect-ratio:21/9} /* div#cover.media */
+.pg-5.pg-5{margin-top:8px} /* p.actions */
+.pg-6.pg-6{color:var(--err)} /* p#why.small */
+.pg-7.pg-7{display:none} /* span.msg */
+.pg-8.pg-8{margin-top:32px} /* div.state-box */
+.pg-9.pg-9{font-size:30px} /* h1 */

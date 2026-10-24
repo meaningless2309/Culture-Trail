@@ -1,0 +1,16 @@
+/* explorer-place-detail.css — CSS riêng của trang explorer-place-detail.html (thêm sau base/layout/components/responsive). */
+
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{height:48px;width:50%} /* div.skeleton */
+.pg-2.pg-2{height:300px;margin-top:24px} /* div.skeleton */
+.pg-3.pg-3{margin-top:32px} /* div.state-box */
+.pg-4.pg-4{margin-bottom:12px} /* h1 */
+.pg-5.pg-5{grid-template-columns:minmax(0,1fr) 360px} /* div.split */
+.pg-6.pg-6{margin-bottom:16px} /* h2 */
+.pg-7.pg-7{font-size:17px} /* p */
+.pg-8.pg-8{margin-left:12px} /* span.dot */
+.pg-9.pg-9{margin:8px 0 4px} /* h3 */
+.pg-10.pg-10{margin:0} /* div.actions */
+.pg-11.pg-11{grid-template-columns:110px 1fr} /* dl.kv */

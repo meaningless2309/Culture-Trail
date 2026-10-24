@@ -1,0 +1,10 @@
+/* admin-user-management.css — CSS riêng của trang admin-user-management.html (thêm sau base/layout/components/responsive). */
+
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{grid-template-columns:minmax(0,1fr) 340px} /* div.split */
+.pg-2.pg-2{border:0;padding:0;margin:0} /* fieldset */
+.pg-3.pg-3{font-weight:600;margin-bottom:8px} /* legend */
+.pg-4.pg-4{color:var(--clay)} /* div.tiny */
+.pg-5.pg-5{color:var(--err)} /* div.tiny */

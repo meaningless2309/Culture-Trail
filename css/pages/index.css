@@ -1,0 +1,30 @@
+/* index.css — CSS riêng của trang index.html (thêm sau base/layout/components/responsive). */
+
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:var(--s6);align-items:center;padding:var(--s5) 0 var(--s6)}
+.hero h1{font-size:clamp(38px,5vw,60px);margin-bottom:var(--s3)}
+.band{background:var(--forest);color:#fff;margin:0 -48px;padding:var(--s4) 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4)}
+.band h2{color:#fff;font-size:26px}
+.band p{margin:4px 0 0;color:#cfe0d4;font-size:14px}
+.feature{background:var(--leaf);margin:var(--s6) -48px 0;padding:var(--s6) 48px;display:grid;grid-template-columns:1.1fr 1fr;gap:var(--s5);align-items:center}
+.cta-band{background:var(--forest);margin:var(--s6) -48px 0;padding:var(--s6) 48px;display:flex;justify-content:space-between;align-items:center;gap:var(--s4);flex-wrap:wrap}
+.cta-band h2{color:#fff}
+.cta-band p{color:#cfe0d4;margin:var(--s2) 0 0}
+.steps .num{font:500 22px var(--serif);color:var(--clay)}
+@media (max-width:1100px){
+  .hero,.feature{grid-template-columns:1fr;gap:var(--s4)}
+  .band,.feature,.cta-band{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}
+}
+@media (max-width:720px){
+  .band{grid-template-columns:1fr;margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}
+  .feature,.cta-band{margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}
+}
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{margin:0} /* figure */
+.pg-2.pg-2{aspect-ratio:1/1} /* div.media */
+.pg-3.pg-3{font-size:26px} /* h2 */
+.pg-4.pg-4{text-decoration:none} /* a */
+.pg-5.pg-5{margin-bottom:24px} /* h2#h-steps */
+.pg-6.pg-6{aspect-ratio:4/3} /* div.media */
+.pg-7.pg-7{margin:8px 0 16px;font-size:36px} /* h2#h-col */

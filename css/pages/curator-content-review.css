@@ -1,0 +1,7 @@
+/* curator-content-review.css — CSS riêng của trang curator-content-review.html (thêm sau base/layout/components/responsive). */
+
+
+/* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
+/* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
+.pg-1.pg-1{padding-left:20px;line-height:2} /* ol.small */
+.pg-2.pg-2{margin-bottom:6px} /* h3 */
