@@ -62,7 +62,7 @@ docs/                 kiểm kê màn hình, vai trò & tính năng, báo cáo A
 - **Quy tắc nghiệp vụ chính**: vòng đời bài (nháp → chờ duyệt → đang xử lý → duyệt/yêu cầu sửa/từ chối → gửi lại), sửa bài đã duyệt tạo phiên bản mới mà **bản công khai giữ nguyên**, lý do bắt buộc khi từ chối/yêu cầu sửa/hủy sự kiện/vô hiệu hóa/đổi quyền, gộp thẻ chuyển liên kết, bộ sưu tập chỉ nhận bài đã duyệt và lưu nháp không đổi bản công khai, không vô hiệu hóa quản trị viên cuối cùng, thông báo tới người bị ảnh hưởng.
 - **Trạng thái UI**: đang tải (skeleton), rỗng, lỗi + Thử lại, thành công (toast/notice), chờ duyệt, bị từ chối, hoàn thành, hủy/lưu trữ, vô hiệu hóa, 403/404, cảnh báo thay đổi chưa lưu.
 
-## Chưa có / nhóm cần tự bổ sung
+## Figma, Github, Video OBS:
 
 Những mục sau là **hoạt động của nhóm**, không thể sinh trong mã nguồn:
 - FIGMA: https://www.figma.com/design/WdIYXfLxl9EuLsQL4P2Nmv/CultureTrail?node-id=0-1&t=VLdekIJDp00kvEKn-1
