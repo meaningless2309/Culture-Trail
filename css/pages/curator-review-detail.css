@@ -1,27 +1,82 @@
 /* curator-review-detail.css — CSS riêng của trang curator-review-detail.html (thêm sau base/layout/components/responsive). */
 
-.tagpick{display:flex;gap:var(--s2);flex-wrap:wrap;margin:var(--s3) 0}
-.tagpick .chip{border:1px solid transparent}
-.tagpick .chip.low{background:var(--blush);color:var(--clay)}
-.tabbar-m{display:none}
-@media (max-width:720px){
+.tagpick {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  margin: var(--s3) 0;
+}
+.tagpick .chip {
+  border: 1px solid transparent;
+}
+.tagpick .chip.low {
+  background: var(--blush);
+  color: var(--clay);
+}
+.tabbar-m {
+  display: none;
+}
+@media (max-width: 720px) {
   /* tab Nội dung / Nguồn & AI cho màn hình duyệt */
-  .tabbar-m{display:flex;gap:var(--s2);margin-bottom:var(--s3)}
-  .tabbar-m button{flex:1;min-height:44px;border-radius:var(--r-ctl);border:1px solid var(--forest);background:var(--surface);color:var(--forest);font:600 14px var(--sans)}
-  .tabbar-m button[aria-pressed=true]{background:var(--forest);color:#fff}
-  [data-mpane].m-off{display:none}
+  .tabbar-m {
+    display: flex;
+    gap: var(--s2);
+    margin-bottom: var(--s3);
+  }
+  .tabbar-m button {
+    flex: 1;
+    min-height: 44px;
+    border-radius: var(--r-ctl);
+    border: 1px solid var(--forest);
+    background: var(--surface);
+    color: var(--forest);
+    font: 600 14px var(--sans);
+  }
+  .tabbar-m button[aria-pressed="true"] {
+    background: var(--forest);
+    color: #fff;
+  }
+  [data-mpane].m-off {
+    display: none;
+  }
 }
 
 /* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
 /* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
-.pg-1.pg-1{height:48px;width:50%} /* div.skeleton */
-.pg-2.pg-2{height:300px;margin-top:24px} /* div.skeleton */
-.pg-3.pg-3{margin-top:32px} /* div.state-box */
-.pg-4.pg-4{grid-template-columns:minmax(0,1fr) 380px} /* div.split */
-.pg-5.pg-5{margin-bottom:16px} /* div */
-.pg-6.pg-6{margin:16px 0 8px} /* h3 */
-.pg-7.pg-7{color:var(--err)} /* b */
-.pg-8.pg-8{margin-top:12px} /* div.field */
-.pg-9.pg-9{height:14px;margin:8px 0} /* div.skeleton */
-.pg-10.pg-10{height:14px;width:70%} /* div.skeleton */
-.pg-11.pg-11{margin-top:0} /* div.actions */
+.pg-1.pg-1 {
+  height: 48px;
+  width: 50%;
+} /* div.skeleton */
+.pg-2.pg-2 {
+  height: 300px;
+  margin-top: 24px;
+} /* div.skeleton */
+.pg-3.pg-3 {
+  margin-top: 32px;
+} /* div.state-box */
+.pg-4.pg-4 {
+  grid-template-columns: minmax(0, 1fr) 380px;
+} /* div.split */
+.pg-5.pg-5 {
+  margin-bottom: 16px;
+} /* div */
+.pg-6.pg-6 {
+  margin: 16px 0 8px;
+} /* h3 */
+.pg-7.pg-7 {
+  color: var(--err);
+} /* b */
+.pg-8.pg-8 {
+  margin-top: 12px;
+} /* div.field */
+.pg-9.pg-9 {
+  height: 14px;
+  margin: 8px 0;
+} /* div.skeleton */
+.pg-10.pg-10 {
+  height: 14px;
+  width: 70%;
+} /* div.skeleton */
+.pg-11.pg-11 {
+  margin-top: 0;
+} /* div.actions */

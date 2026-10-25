@@ -1,28 +1,63 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thống kê văn hóa · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/admin-culture-dashboard.css">
-</head>
-<body data-page="admin-culture-dashboard" data-space="admin" data-nav="stats">
-<main>
-<div class="page-head"><div><p class="eyebrow">TỔNG QUAN HỆ THỐNG</p><h1>Nhịp khám phá văn hóa</h1><p class="lede">Hiểu mức độ tương tác và độ phủ nội dung để định hướng biên tập.</p></div></div>
-<div class="notice notice--warn"><strong>Toàn bộ số liệu là dữ liệu giả lập</strong><p>Các KPI, biểu đồ và so sánh dưới đây chỉ phục vụ thiết kế. Không phải thống kê từ người dùng thật hoặc bằng chứng về tác động văn hóa.</p></div>
-<form class="filters mt pg-1" id="ff"><div class="field"><label for="per">Khoảng thời gian</label><select id="per"><option value="2026-09">01/09/2026 – 30/09/2026</option><option value="2026-08">01/08/2026 – 31/08/2026</option></select></div><div class="field"><label for="reg">Vùng miền</label><select id="reg"><option value="">Tất cả vùng miền</option></select></div><button class="btn" type="submit">Áp dụng</button><button class="btn btn-ghost" type="button" id="exp">Xuất báo cáo mẫu</button></form>
-<div id="out" aria-live="polite"></div>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/admin-culture-dashboard.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thống kê văn hóa · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/admin-culture-dashboard.css" />
+  </head>
+  <body data-page="admin-culture-dashboard" data-space="admin" data-nav="stats">
+    <main>
+      <div class="page-head">
+        <div>
+          <p class="eyebrow">TỔNG QUAN HỆ THỐNG</p>
+          <h1>Nhịp khám phá văn hóa</h1>
+          <p class="lede">
+            Hiểu mức độ tương tác và độ phủ nội dung để định hướng biên tập.
+          </p>
+        </div>
+      </div>
+      <div class="notice notice--warn">
+        <strong>Toàn bộ số liệu là dữ liệu giả lập</strong>
+        <p>
+          Các KPI, biểu đồ và so sánh dưới đây chỉ phục vụ thiết kế. Không phải
+          thống kê từ người dùng thật hoặc bằng chứng về tác động văn hóa.
+        </p>
+      </div>
+      <form class="filters mt pg-1" id="ff">
+        <div class="field">
+          <label for="per">Khoảng thời gian</label
+          ><select id="per">
+            <option value="2026-09">01/09/2026 – 30/09/2026</option>
+            <option value="2026-08">01/08/2026 – 31/08/2026</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="reg">Vùng miền</label
+          ><select id="reg">
+            <option value="">Tất cả vùng miền</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Áp dụng</button
+        ><button class="btn btn-ghost" type="button" id="exp">
+          Xuất báo cáo mẫu
+        </button>
+      </form>
+      <div id="out" aria-live="polite"></div>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/admin-culture-dashboard.js"></script>
+  </body>
 </html>

@@ -1,13 +1,41 @@
 /* explorer-ai-trail-generator.css — CSS riêng của trang explorer-ai-trail-generator.html (thêm sau base/layout/components/responsive). */
 
-.stepper{display:flex;gap:var(--s3);align-items:center;font-size:13px;font-weight:600;color:var(--muted);flex-wrap:wrap;margin-bottom:var(--s4)}
-.stepper span.on{color:var(--forest)}
-.stepper span::before{content:'●';margin-right:6px;font-size:10px}
+.stepper {
+  display: flex;
+  gap: var(--s3);
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  flex-wrap: wrap;
+  margin-bottom: var(--s4);
+}
+.stepper span.on {
+  color: var(--forest);
+}
+.stepper span::before {
+  content: "●";
+  margin-right: 6px;
+  font-size: 10px;
+}
 
 /* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
 /* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
-.pg-1.pg-1{list-style:none} /* li */
-.pg-2.pg-2{grid-template-columns:340px minmax(0,1fr)} /* div.split */
-.pg-3.pg-3{height:90px;margin:12px 0} /* div.skeleton */
-.pg-4.pg-4{height:90px} /* div.skeleton */
-.pg-5.pg-5{font-size:34px;font-family:var(--serif);font-weight:500} /* h2 */
+.pg-1.pg-1 {
+  list-style: none;
+} /* li */
+.pg-2.pg-2 {
+  grid-template-columns: 340px minmax(0, 1fr);
+} /* div.split */
+.pg-3.pg-3 {
+  height: 90px;
+  margin: 12px 0;
+} /* div.skeleton */
+.pg-4.pg-4 {
+  height: 90px;
+} /* div.skeleton */
+.pg-5.pg-5 {
+  font-size: 34px;
+  font-family: var(--serif);
+  font-weight: 500;
+} /* h2 */

@@ -1,44 +1,152 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Soạn sự kiện · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/creator-event-editor.css">
-</head>
-<body data-page="creator-event-editor" data-space="creator" data-nav="events">
-<main>
-<p class="eyebrow" id="eb">SỰ KIỆN / CHỈNH SỬA</p>
-<h1 id="h">Sự kiện mới</h1>
-<p class="lede">Thông tin rõ ràng giúp khách chuẩn bị và giúp bạn đón tiếp chu đáo.</p>
-<form id="f" novalidate class="mt"><div class="split pg-1">
-  <div class="card form-stack"><h2 class="panel-title">Nội dung chính</h2>
-    <div class="field"><label for="title">Tên sự kiện *</label><input id="title" name="title"><span class="msg"></span></div>
-    <div class="field"><label for="placeId">Địa danh *</label><select id="placeId" name="placeId"></select><span class="msg"></span></div>
-    <div class="field"><label for="location">Địa điểm tổ chức *</label><input id="location" name="location"><span class="msg"></span></div>
-    <div class="field"><label for="address">Địa chỉ chi tiết</label><input id="address" name="address"></div>
-    <div class="form-grid"><div class="field"><label for="startDate">Ngày bắt đầu *</label><input id="startDate" name="startDate" type="date"><span class="msg"></span></div><div class="field"><label for="endDate">Ngày kết thúc *</label><input id="endDate" name="endDate" type="date"><span class="msg"></span></div>
-    <div class="field"><label for="startTime">Giờ bắt đầu *</label><input id="startTime" name="startTime" type="time"><span class="msg"></span></div><div class="field"><label for="endTime">Giờ kết thúc *</label><input id="endTime" name="endTime" type="time"><span class="msg"></span></div>
-    <div class="field"><label for="capacity">Sức chứa *</label><input id="capacity" name="capacity" type="number" min="1" step="1"><span class="hint">Số nguyên dương, tối thiểu bằng số người đã đăng ký.</span><span class="msg"></span></div><div class="field"><label for="fee">Phí tham gia</label><input id="fee" name="fee" placeholder="Ví dụ: Liên hệ xưởng"></div></div>
-    <div class="field"><label for="desc">Mô tả sự kiện *</label><textarea id="desc" name="desc" rows="4"></textarea><span class="msg"></span></div>
-    <div class="field"><label for="contact">Thông tin liên hệ *</label><input id="contact" name="contact"><span class="msg"></span></div>
-    <div class="media pg-2"><img src="assets/images/clay.svg" alt="Ảnh minh họa sự kiện"></div>
-    <div class="field"><label for="imageSource">Nguồn ảnh</label><input id="imageSource" name="imageSource"></div>
-    <div class="actions"><button class="btn" type="submit" id="save">Lưu thay đổi</button><button class="btn btn-ghost" type="button" id="pub">Xuất bản</button><button class="btn btn-ghost" type="button" id="prev">Xem trước</button></div></div>
-  <aside class="stack"><section class="card"><h2 class="panel-title">Trạng thái & kiểm tra</h2><p id="st" class="dot"></p><p id="cap" class="small"></p><ul class="check-list" id="chk"></ul><div class="notice"><strong>Khi xuất bản</strong><p>Sự kiện sẽ hiển thị trên hồ sơ và địa danh liên kết. Thay đổi lịch cần thông báo cho người đã lưu.</p></div><p class="mt mb0"><button class="link-btn danger" type="button" id="cancel" hidden>Hủy sự kiện</button></p></section></aside>
-</div></form>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/modules/creator.js"></script>
-<script src="js/pages/creator-event-editor.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soạn sự kiện · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/creator-event-editor.css" />
+  </head>
+  <body data-page="creator-event-editor" data-space="creator" data-nav="events">
+    <main>
+      <p class="eyebrow" id="eb">SỰ KIỆN / CHỈNH SỬA</p>
+      <h1 id="h">Sự kiện mới</h1>
+      <p class="lede">
+        Thông tin rõ ràng giúp khách chuẩn bị và giúp bạn đón tiếp chu đáo.
+      </p>
+      <form id="f" novalidate class="mt">
+        <div class="split pg-1">
+          <div class="card form-stack">
+            <h2 class="panel-title">Nội dung chính</h2>
+            <div class="field">
+              <label for="title">Tên sự kiện *</label
+              ><input id="title" name="title" /><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="placeId">Địa danh *</label
+              ><select id="placeId" name="placeId"></select
+              ><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="location">Địa điểm tổ chức *</label
+              ><input id="location" name="location" /><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="address">Địa chỉ chi tiết</label
+              ><input id="address" name="address" />
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="startDate">Ngày bắt đầu *</label
+                ><input id="startDate" name="startDate" type="date" /><span
+                  class="msg"
+                ></span>
+              </div>
+              <div class="field">
+                <label for="endDate">Ngày kết thúc *</label
+                ><input id="endDate" name="endDate" type="date" /><span
+                  class="msg"
+                ></span>
+              </div>
+              <div class="field">
+                <label for="startTime">Giờ bắt đầu *</label
+                ><input id="startTime" name="startTime" type="time" /><span
+                  class="msg"
+                ></span>
+              </div>
+              <div class="field">
+                <label for="endTime">Giờ kết thúc *</label
+                ><input id="endTime" name="endTime" type="time" /><span
+                  class="msg"
+                ></span>
+              </div>
+              <div class="field">
+                <label for="capacity">Sức chứa *</label
+                ><input
+                  id="capacity"
+                  name="capacity"
+                  type="number"
+                  min="1"
+                  step="1"
+                /><span class="hint"
+                  >Số nguyên dương, tối thiểu bằng số người đã đăng ký.</span
+                ><span class="msg"></span>
+              </div>
+              <div class="field">
+                <label for="fee">Phí tham gia</label
+                ><input
+                  id="fee"
+                  name="fee"
+                  placeholder="Ví dụ: Liên hệ xưởng"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="desc">Mô tả sự kiện *</label
+              ><textarea id="desc" name="desc" rows="4"></textarea
+              ><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="contact">Thông tin liên hệ *</label
+              ><input id="contact" name="contact" /><span class="msg"></span>
+            </div>
+            <div class="media pg-2">
+              <img src="assets/images/clay.svg" alt="Ảnh minh họa sự kiện" />
+            </div>
+            <div class="field">
+              <label for="imageSource">Nguồn ảnh</label
+              ><input id="imageSource" name="imageSource" />
+            </div>
+            <div class="actions">
+              <button class="btn" type="submit" id="save">Lưu thay đổi</button
+              ><button class="btn btn-ghost" type="button" id="pub">
+                Xuất bản</button
+              ><button class="btn btn-ghost" type="button" id="prev">
+                Xem trước
+              </button>
+            </div>
+          </div>
+          <aside class="stack">
+            <section class="card">
+              <h2 class="panel-title">Trạng thái & kiểm tra</h2>
+              <p id="st" class="dot"></p>
+              <p id="cap" class="small"></p>
+              <ul class="check-list" id="chk"></ul>
+              <div class="notice">
+                <strong>Khi xuất bản</strong>
+                <p>
+                  Sự kiện sẽ hiển thị trên hồ sơ và địa danh liên kết. Thay đổi
+                  lịch cần thông báo cho người đã lưu.
+                </p>
+              </div>
+              <p class="mt mb0">
+                <button
+                  class="link-btn danger"
+                  type="button"
+                  id="cancel"
+                  hidden
+                >
+                  Hủy sự kiện
+                </button>
+              </p>
+            </section>
+          </aside>
+        </div>
+      </form>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modules/creator.js"></script>
+    <script src="js/pages/creator-event-editor.js"></script>
+  </body>
 </html>

@@ -1,57 +1,174 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cài đặt tài khoản · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/account-settings.css">
-</head>
-<body data-page="account-settings" data-auth="required">
-<main>
-<p class="eyebrow">TÀI KHOẢN</p>
-<div class="page-head"><div><h1>Cài đặt tài khoản</h1><p class="lede">Quản lý bảo mật, thông báo và quyền riêng tư của bạn.</p></div></div>
-<div class="split pg-1">
-  <div class="stack">
-    <nav class="card" aria-label="Mục cài đặt"><div class="stack-s pg-2"><a href="#security"><b>Thông tin & bảo mật</b></a><div><a class="pg-3" href="#notifications">Thông báo</a></div><div><a class="pg-3" href="#notifications">Quyền riêng tư</a></div><div><a class="pg-3" href="#roles">Vai trò & truy cập</a></div></div></nav>
-    <div class="notice"><strong>Ngôn ngữ hiển thị</strong><p>Tiếng Việt · Múi giờ: Asia/Ho_Chi_Minh</p></div>
-  </div>
-  <div class="stack">
-    <section class="card" id="security" aria-labelledby="s1"><h2 id="s1" class="panel-title">Email & mật khẩu</h2>
-      <div class="field pg-4"><span class="lbl">Email</span><div id="mail"></div></div>
-      <form id="pf" class="form-stack" novalidate>
-        <div class="form-grid">
-          <div class="field"><label for="cur">Mật khẩu hiện tại</label><div class="pw"><input id="cur" name="cur" type="password" autocomplete="current-password"><button type="button" aria-pressed="false">Hiện mật khẩu</button></div><span class="msg"></span></div>
-          <div class="field"><label for="np">Mật khẩu mới</label><div class="pw"><input id="np" name="np" type="password" autocomplete="new-password"><button type="button" aria-pressed="false">Hiện mật khẩu</button></div><span class="hint">Tối thiểu 8 ký tự, gồm chữ và số</span><span class="msg"></span></div>
-          <div class="field full"><label for="nc">Xác nhận mật khẩu mới</label><div class="pw"><input id="nc" name="nc" type="password" autocomplete="new-password"><button type="button" aria-pressed="false">Hiện mật khẩu</button></div><span class="msg"></span></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cài đặt tài khoản · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/account-settings.css" />
+  </head>
+  <body data-page="account-settings" data-auth="required">
+    <main>
+      <p class="eyebrow">TÀI KHOẢN</p>
+      <div class="page-head">
+        <div>
+          <h1>Cài đặt tài khoản</h1>
+          <p class="lede">
+            Quản lý bảo mật, thông báo và quyền riêng tư của bạn.
+          </p>
         </div>
-        <div class="actions"><button class="btn" type="submit">Đổi mật khẩu</button><button class="btn btn-ghost" type="button" id="others">Đăng xuất thiết bị khác</button></div>
-      </form></section>
-    <section class="card" id="notifications" aria-labelledby="s2"><h2 id="s2" class="panel-title">Thông báo & quyền riêng tư</h2>
-      <form id="nf">
-        <label class="switch"><span>Kết quả duyệt câu chuyện</span><span class="row"><input type="checkbox" name="review" role="switch"><span class="state"></span></span></label>
-        <label class="switch"><span>Cập nhật sự kiện đã lưu</span><span class="row"><input type="checkbox" name="events" role="switch"><span class="state"></span></span></label>
-        <label class="switch"><span>Gợi ý câu chuyện hàng tuần</span><span class="row"><input type="checkbox" name="weekly" role="switch"><span class="state"></span></span></label>
-        <label class="switch"><span>Hiển thị hồ sơ khám phá công khai</span><span class="row"><input type="checkbox" name="publicProfile" role="switch"><span class="state"></span></span></label>
-        <div class="actions"><button class="btn" type="submit">Lưu tùy chọn</button></div>
-      </form></section>
-    <section class="card" id="roles" aria-labelledby="s3"><h2 id="s3" class="panel-title">Quản lý tài khoản</h2>
-      <p class="muted">Tạm ngừng tài khoản sẽ ẩn hồ sơ cá nhân. Bạn có thể gửi yêu cầu mở lại qua bộ phận hỗ trợ.</p>
-      <p class="small"><b>Vai trò & truy cập:</b> <span id="rl"></span></p>
-      <div class="actions"><button class="link-btn" type="button" id="exp">Xuất dữ liệu cá nhân</button><button class="link-btn danger" type="button" id="deact">Yêu cầu ngừng tài khoản</button></div></section>
-    <div class="notice hidden" id="saved" role="status"><strong>Đã lưu cài đặt</strong><p>Tùy chọn thông báo mới sẽ có hiệu lực từ lần gửi tiếp theo.</p></div>
-  </div>
-</div>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/account-settings.js"></script>
-</body>
+      </div>
+      <div class="split pg-1">
+        <div class="stack">
+          <nav class="card" aria-label="Mục cài đặt">
+            <div class="stack-s pg-2">
+              <a href="#security"><b>Thông tin & bảo mật</b></a>
+              <div><a class="pg-3" href="#notifications">Thông báo</a></div>
+              <div>
+                <a class="pg-3" href="#notifications">Quyền riêng tư</a>
+              </div>
+              <div><a class="pg-3" href="#roles">Vai trò & truy cập</a></div>
+            </div>
+          </nav>
+          <div class="notice">
+            <strong>Ngôn ngữ hiển thị</strong>
+            <p>Tiếng Việt · Múi giờ: Asia/Ho_Chi_Minh</p>
+          </div>
+        </div>
+        <div class="stack">
+          <section class="card" id="security" aria-labelledby="s1">
+            <h2 id="s1" class="panel-title">Email & mật khẩu</h2>
+            <div class="field pg-4">
+              <span class="lbl">Email</span>
+              <div id="mail"></div>
+            </div>
+            <form id="pf" class="form-stack" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="cur">Mật khẩu hiện tại</label>
+                  <div class="pw">
+                    <input
+                      id="cur"
+                      name="cur"
+                      type="password"
+                      autocomplete="current-password"
+                    /><button type="button" aria-pressed="false">
+                      Hiện mật khẩu
+                    </button>
+                  </div>
+                  <span class="msg"></span>
+                </div>
+                <div class="field">
+                  <label for="np">Mật khẩu mới</label>
+                  <div class="pw">
+                    <input
+                      id="np"
+                      name="np"
+                      type="password"
+                      autocomplete="new-password"
+                    /><button type="button" aria-pressed="false">
+                      Hiện mật khẩu
+                    </button>
+                  </div>
+                  <span class="hint">Tối thiểu 8 ký tự, gồm chữ và số</span
+                  ><span class="msg"></span>
+                </div>
+                <div class="field full">
+                  <label for="nc">Xác nhận mật khẩu mới</label>
+                  <div class="pw">
+                    <input
+                      id="nc"
+                      name="nc"
+                      type="password"
+                      autocomplete="new-password"
+                    /><button type="button" aria-pressed="false">
+                      Hiện mật khẩu
+                    </button>
+                  </div>
+                  <span class="msg"></span>
+                </div>
+              </div>
+              <div class="actions">
+                <button class="btn" type="submit">Đổi mật khẩu</button
+                ><button class="btn btn-ghost" type="button" id="others">
+                  Đăng xuất thiết bị khác
+                </button>
+              </div>
+            </form>
+          </section>
+          <section class="card" id="notifications" aria-labelledby="s2">
+            <h2 id="s2" class="panel-title">Thông báo & quyền riêng tư</h2>
+            <form id="nf">
+              <label class="switch"
+                ><span>Kết quả duyệt câu chuyện</span
+                ><span class="row"
+                  ><input type="checkbox" name="review" role="switch" /><span
+                    class="state"
+                  ></span></span
+              ></label>
+              <label class="switch"
+                ><span>Cập nhật sự kiện đã lưu</span
+                ><span class="row"
+                  ><input type="checkbox" name="events" role="switch" /><span
+                    class="state"
+                  ></span></span
+              ></label>
+              <label class="switch"
+                ><span>Gợi ý câu chuyện hàng tuần</span
+                ><span class="row"
+                  ><input type="checkbox" name="weekly" role="switch" /><span
+                    class="state"
+                  ></span></span
+              ></label>
+              <label class="switch"
+                ><span>Hiển thị hồ sơ khám phá công khai</span
+                ><span class="row"
+                  ><input
+                    type="checkbox"
+                    name="publicProfile"
+                    role="switch" /><span class="state"></span></span
+              ></label>
+              <div class="actions">
+                <button class="btn" type="submit">Lưu tùy chọn</button>
+              </div>
+            </form>
+          </section>
+          <section class="card" id="roles" aria-labelledby="s3">
+            <h2 id="s3" class="panel-title">Quản lý tài khoản</h2>
+            <p class="muted">
+              Tạm ngừng tài khoản sẽ ẩn hồ sơ cá nhân. Bạn có thể gửi yêu cầu mở
+              lại qua bộ phận hỗ trợ.
+            </p>
+            <p class="small">
+              <b>Vai trò & truy cập:</b> <span id="rl"></span>
+            </p>
+            <div class="actions">
+              <button class="link-btn" type="button" id="exp">
+                Xuất dữ liệu cá nhân</button
+              ><button class="link-btn danger" type="button" id="deact">
+                Yêu cầu ngừng tài khoản
+              </button>
+            </div>
+          </section>
+          <div class="notice hidden" id="saved" role="status">
+            <strong>Đã lưu cài đặt</strong>
+            <p>Tùy chọn thông báo mới sẽ có hiệu lực từ lần gửi tiếp theo.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/account-settings.js"></script>
+  </body>
 </html>

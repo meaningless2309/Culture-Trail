@@ -1,11 +1,26 @@
 /* explorer-my-trail.css — CSS riêng của trang explorer-my-trail.html (thêm sau base/layout/components/responsive). */
 
-
 /* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
 /* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
-.pg-1.pg-1{grid-template-columns:320px minmax(0,1fr)} /* div.split */
-.pg-2.pg-2{margin-bottom:12px} /* div.field */
-.pg-3.pg-3{font:500 20px var(--serif);color:var(--forest);display:block} /* span */
-.pg-4.pg-4{font-size:36px;font-family:var(--serif);font-weight:500} /* h2 */
-.pg-5.pg-5{grid-template-columns:minmax(0,1fr) 340px} /* div.split */
-.pg-6.pg-6{color:var(--err)} /* button#del.btn */
+.pg-1.pg-1 {
+  grid-template-columns: 320px minmax(0, 1fr);
+} /* div.split */
+.pg-2.pg-2 {
+  margin-bottom: 12px;
+} /* div.field */
+.pg-3.pg-3 {
+  font: 500 20px var(--serif);
+  color: var(--forest);
+  display: block;
+} /* span */
+.pg-4.pg-4 {
+  font-size: 36px;
+  font-family: var(--serif);
+  font-weight: 500;
+} /* h2 */
+.pg-5.pg-5 {
+  grid-template-columns: minmax(0, 1fr) 340px;
+} /* div.split */
+.pg-6.pg-6 {
+  color: var(--err);
+} /* button#del.btn */

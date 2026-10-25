@@ -1,45 +1,97 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hồ sơ cá nhân · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/personal-profile.css">
-</head>
-<body data-page="personal-profile" data-auth="required">
-<main>
-<p class="eyebrow">TÀI KHOẢN</p>
-<div class="page-head"><div><h1 id="hello">Xin chào</h1><p class="lede">Một nơi lưu lại những câu chuyện bạn yêu và những hành trình sắp tới.</p></div></div>
-<div class="split pg-1">
-  <div class="stack">
-    <section class="card" aria-labelledby="pc"><h2 id="pc" class="panel-title pg-2"></h2><div id="pcBody"></div></section>
-    <section class="card" id="permission" aria-labelledby="ws"><h2 id="ws" class="panel-title">Chọn không gian làm việc</h2><div id="wsBody"></div></section>
-  </div>
-  <div class="stack">
-    <section class="card" aria-labelledby="pi"><h2 id="pi" class="panel-title">Thông tin cá nhân</h2>
-      <form id="f" class="form-stack" novalidate>
-        <div class="form-grid">
-          <div class="field"><label for="name">Họ và tên *</label><input id="name" name="name" autocomplete="name"><span class="msg"></span></div>
-          <div class="field"><label for="city">Nơi sống</label><select id="city" name="city"><option value="">Chưa chọn</option><option>Hà Nội</option><option>Hội An</option><option>Huế</option><option>TP. Hồ Chí Minh</option><option>Đà Nẵng</option></select></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hồ sơ cá nhân · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/personal-profile.css" />
+  </head>
+  <body data-page="personal-profile" data-auth="required">
+    <main>
+      <p class="eyebrow">TÀI KHOẢN</p>
+      <div class="page-head">
+        <div>
+          <h1 id="hello">Xin chào</h1>
+          <p class="lede">
+            Một nơi lưu lại những câu chuyện bạn yêu và những hành trình sắp
+            tới.
+          </p>
         </div>
-        <div class="field"><label for="bio">Giới thiệu</label><textarea id="bio" name="bio" maxlength="300" rows="4"></textarea><span class="hint">Tối đa 300 ký tự.</span><span class="msg"></span></div>
-        <div class="actions"><button class="btn" type="submit">Lưu thay đổi</button><button class="btn btn-ghost" type="button" id="cancel">Hủy</button></div>
-      </form></section>
-    <div class="grid g3" id="stats"></div>
-    <section aria-labelledby="sv"><h2 class="pg-3" id="sv">Câu chuyện bạn đã lưu</h2><div id="saved" aria-live="polite"></div></section>
-  </div>
-</div>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/personal-profile.js"></script>
-</body>
+      </div>
+      <div class="split pg-1">
+        <div class="stack">
+          <section class="card" aria-labelledby="pc">
+            <h2 id="pc" class="panel-title pg-2"></h2>
+            <div id="pcBody"></div>
+          </section>
+          <section class="card" id="permission" aria-labelledby="ws">
+            <h2 id="ws" class="panel-title">Chọn không gian làm việc</h2>
+            <div id="wsBody"></div>
+          </section>
+        </div>
+        <div class="stack">
+          <section class="card" aria-labelledby="pi">
+            <h2 id="pi" class="panel-title">Thông tin cá nhân</h2>
+            <form id="f" class="form-stack" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Họ và tên *</label
+                  ><input id="name" name="name" autocomplete="name" /><span
+                    class="msg"
+                  ></span>
+                </div>
+                <div class="field">
+                  <label for="city">Nơi sống</label
+                  ><select id="city" name="city">
+                    <option value="">Chưa chọn</option>
+                    <option>Hà Nội</option>
+                    <option>Hội An</option>
+                    <option>Huế</option>
+                    <option>TP. Hồ Chí Minh</option>
+                    <option>Đà Nẵng</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="bio">Giới thiệu</label
+                ><textarea
+                  id="bio"
+                  name="bio"
+                  maxlength="300"
+                  rows="4"
+                ></textarea
+                ><span class="hint">Tối đa 300 ký tự.</span
+                ><span class="msg"></span>
+              </div>
+              <div class="actions">
+                <button class="btn" type="submit">Lưu thay đổi</button
+                ><button class="btn btn-ghost" type="button" id="cancel">
+                  Hủy
+                </button>
+              </div>
+            </form>
+          </section>
+          <div class="grid g3" id="stats"></div>
+          <section aria-labelledby="sv">
+            <h2 class="pg-3" id="sv">Câu chuyện bạn đã lưu</h2>
+            <div id="saved" aria-live="polite"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/personal-profile.js"></script>
+  </body>
 </html>

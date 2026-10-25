@@ -1,8 +1,13 @@
 /* creator-event-editor.css — CSS riêng của trang creator-event-editor.html (thêm sau base/layout/components/responsive). */
 
-
 /* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
 /* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
-.pg-1.pg-1{grid-template-columns:minmax(0,1fr) 360px} /* div.split */
-.pg-2.pg-2{aspect-ratio:21/9} /* div.media */
-.pg-3.pg-3{margin-top:32px} /* div.state-box */
+.pg-1.pg-1 {
+  grid-template-columns: minmax(0, 1fr) 360px;
+} /* div.split */
+.pg-2.pg-2 {
+  aspect-ratio: 21/9;
+} /* div.media */
+.pg-3.pg-3 {
+  margin-top: 32px;
+} /* div.state-box */

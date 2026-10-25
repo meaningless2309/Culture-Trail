@@ -1,16 +1,46 @@
 /* curator-collection-editor.css — CSS riêng của trang curator-collection-editor.html (thêm sau base/layout/components/responsive). */
 
-
 /* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
 /* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
-.pg-1.pg-1{grid-template-columns:minmax(0,1fr) 340px} /* div.split */
-.pg-2.pg-2{font-weight:600;margin:0 0 8px} /* p.lbl */
-.pg-3.pg-3{color:var(--err);display:none} /* p#cmsg.small */
-.pg-4.pg-4{font:600 16px var(--sans);margin:24px 0 8px} /* h3 */
-.pg-5.pg-5{margin-top:32px} /* div.state-box */
-.pg-6.pg-6{font-size:30px} /* h1 */
-.pg-7.pg-7{display:inline-block;width:56px;height:32px;border-radius:4px;overflow:hidden;vertical-align:middle} /* span */
-.pg-8.pg-8{color:var(--err)} /* div.small */
-.pg-9.pg-9{align-items:flex-start} /* div.row */
-.pg-10.pg-10{width:180px} /* div */
-.pg-11.pg-11{flex:1;min-width:200px} /* div */
+.pg-1.pg-1 {
+  grid-template-columns: minmax(0, 1fr) 340px;
+} /* div.split */
+.pg-2.pg-2 {
+  font-weight: 600;
+  margin: 0 0 8px;
+} /* p.lbl */
+.pg-3.pg-3 {
+  color: var(--err);
+  display: none;
+} /* p#cmsg.small */
+.pg-4.pg-4 {
+  font: 600 16px var(--sans);
+  margin: 24px 0 8px;
+} /* h3 */
+.pg-5.pg-5 {
+  margin-top: 32px;
+} /* div.state-box */
+.pg-6.pg-6 {
+  font-size: 30px;
+} /* h1 */
+.pg-7.pg-7 {
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+  vertical-align: middle;
+} /* span */
+.pg-8.pg-8 {
+  color: var(--err);
+} /* div.small */
+.pg-9.pg-9 {
+  align-items: flex-start;
+} /* div.row */
+.pg-10.pg-10 {
+  width: 180px;
+} /* div */
+.pg-11.pg-11 {
+  flex: 1;
+  min-width: 200px;
+} /* div */

@@ -1,7 +1,10 @@
 /* 403.css — CSS riêng của trang 403.html (thêm sau base/layout/components/responsive). */
 
-
 /* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
 /* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
-.pg-1.pg-1{margin-top:48px} /* div.state-box */
-.pg-2.pg-2{margin-bottom:12px} /* h1 */
+.pg-1.pg-1 {
+  margin-top: 48px;
+} /* div.state-box */
+.pg-2.pg-2 {
+  margin-bottom: 12px;
+} /* h1 */

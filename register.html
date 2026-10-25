@@ -1,44 +1,119 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Đăng ký · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/register.css">
-</head>
-<body data-page="register">
-<main>
-<div class="auth">
-  <div class="auth-art"><figure><div class="media"><img src="assets/images/lantern.svg" alt="Ảnh minh họa: nghệ nhân làm đèn lồng trong xưởng nhỏ"></div></figure>
-    <p class="cap">Mỗi người góp một câu chuyện. Mỗi hành trình mở một kết nối.</p><p class="small muted">Hội An · Ảnh minh họa</p></div>
-  <div>
-    <span class="dot">Bắt đầu miễn phí</span>
-    <h1 class="pg-1">Tạo tài khoản</h1>
-    <p class="lede">Khám phá văn hóa địa phương theo cách của bạn.</p>
-    <div id="alert" aria-live="assertive"></div>
-    <form id="f" class="form-stack mt" novalidate>
-      <div class="field"><label for="name">Họ và tên *</label><input id="name" name="name" autocomplete="name"><span class="msg"></span></div>
-      <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email"><span class="msg"></span></div>
-      <div class="field"><label for="password">Mật khẩu *</label><div class="pw"><input id="password" name="password" type="password" autocomplete="new-password"><button type="button" aria-pressed="false">Hiện mật khẩu</button></div><div class="meter" id="meter" data-l="0"><i></i></div><span class="hint" id="pwhint">Từ 8 ký tự, gồm chữ và số</span><span class="msg"></span></div>
-      <div class="field"><label for="confirm">Xác nhận mật khẩu *</label><div class="pw"><input id="confirm" name="confirm" type="password" autocomplete="new-password"><button type="button" aria-pressed="false">Hiện mật khẩu</button></div><span class="msg"></span></div>
-      <div class="field"><label for="role">Bạn muốn bắt đầu với vai trò nào?</label><select id="role" name="role"><option value="explorer">Người khám phá</option><option value="creator">Nghệ nhân / Nhà sáng tạo (xin quyền sau)</option></select><span class="hint">Nghệ nhân có thể yêu cầu quyền đăng bài sau khi hoàn thiện hồ sơ. Biên tập và quản trị do quản trị viên cấp.</span></div>
-      <label class="check"><input type="checkbox" name="terms"> <span>Tôi đồng ý với Điều khoản sử dụng và Chính sách quyền riêng tư. *</span></label>
-      <button class="btn" type="submit" id="go">→ Tạo tài khoản</button>
-    </form>
-    <p class="mt">Đã có tài khoản? <a href="login.html"><b>Đăng nhập →</b></a></p>
-  </div>
-</div>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/register.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng ký · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/register.css" />
+  </head>
+  <body data-page="register">
+    <main>
+      <div class="auth">
+        <div class="auth-art">
+          <figure>
+            <div class="media">
+              <img
+                src="assets/images/lantern.svg"
+                alt="Ảnh minh họa: nghệ nhân làm đèn lồng trong xưởng nhỏ"
+              />
+            </div>
+          </figure>
+          <p class="cap">
+            Mỗi người góp một câu chuyện. Mỗi hành trình mở một kết nối.
+          </p>
+          <p class="small muted">Hội An · Ảnh minh họa</p>
+        </div>
+        <div>
+          <span class="dot">Bắt đầu miễn phí</span>
+          <h1 class="pg-1">Tạo tài khoản</h1>
+          <p class="lede">Khám phá văn hóa địa phương theo cách của bạn.</p>
+          <div id="alert" aria-live="assertive"></div>
+          <form id="f" class="form-stack mt" novalidate>
+            <div class="field">
+              <label for="name">Họ và tên *</label
+              ><input id="name" name="name" autocomplete="name" /><span
+                class="msg"
+              ></span>
+            </div>
+            <div class="field">
+              <label for="email">Email *</label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+              /><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="password">Mật khẩu *</label>
+              <div class="pw">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="new-password"
+                /><button type="button" aria-pressed="false">
+                  Hiện mật khẩu
+                </button>
+              </div>
+              <div class="meter" id="meter" data-l="0"><i></i></div>
+              <span class="hint" id="pwhint">Từ 8 ký tự, gồm chữ và số</span
+              ><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="confirm">Xác nhận mật khẩu *</label>
+              <div class="pw">
+                <input
+                  id="confirm"
+                  name="confirm"
+                  type="password"
+                  autocomplete="new-password"
+                /><button type="button" aria-pressed="false">
+                  Hiện mật khẩu
+                </button>
+              </div>
+              <span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="role">Bạn muốn bắt đầu với vai trò nào?</label
+              ><select id="role" name="role">
+                <option value="explorer">Người khám phá</option>
+                <option value="creator">
+                  Nghệ nhân / Nhà sáng tạo (xin quyền sau)
+                </option></select
+              ><span class="hint"
+                >Nghệ nhân có thể yêu cầu quyền đăng bài sau khi hoàn thiện hồ
+                sơ. Biên tập và quản trị do quản trị viên cấp.</span
+              >
+            </div>
+            <label class="check"
+              ><input type="checkbox" name="terms" />
+              <span
+                >Tôi đồng ý với Điều khoản sử dụng và Chính sách quyền riêng tư.
+                *</span
+              ></label
+            >
+            <button class="btn" type="submit" id="go">→ Tạo tài khoản</button>
+          </form>
+          <p class="mt">
+            Đã có tài khoản? <a href="login.html"><b>Đăng nhập →</b></a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/register.js"></script>
+  </body>
 </html>

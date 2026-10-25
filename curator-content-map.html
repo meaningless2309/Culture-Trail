@@ -1,36 +1,112 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bản đồ nội dung · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/curator-content-map.css">
-</head>
-<body data-page="curator-content-map" data-space="curator" data-nav="map">
-<main>
-<div class="page-head"><div><p class="eyebrow">LIÊN KẾT VĂN HÓA & ĐỊA DANH</p><h1>Bản đồ nội dung</h1><p class="lede">Theo dõi nội dung đã có địa danh và bổ sung liên kết còn thiếu.</p></div></div>
-<div class="notice notice--warn"><strong>Bản đồ sơ đồ minh họa</strong><p>Không phải bản đồ địa lý thực tế. Điểm, tuyến và số lượng là dữ liệu mẫu. Công cụ này chỉ mô phỏng việc quản lý liên kết nội dung.</p></div>
-<form class="filters mt pg-1" id="ff"><div class="field"><label for="reg">Khu vực</label><select id="reg"><option value="">Tất cả</option></select></div><div class="field"><label for="top">Chủ đề</label><select id="top"><option value="">Tất cả</option></select></div><div class="field"><label for="ls">Trạng thái liên kết</label><select id="ls"><option value="">Tất cả</option><option value="linked">Đã liên kết</option><option value="unlinked">Chưa có địa danh</option></select></div><button class="btn pg-2" type="submit">Áp dụng</button></form>
-<div class="split mt pg-3">
-  <div class="stack"><div id="map"></div><div class="legend" id="legend"></div><section class="card" id="sel" aria-live="polite"></section>
-    <section class="card" id="formCard"><h2 class="panel-title">Liên kết / cập nhật địa danh</h2><form id="lf" novalidate class="form-stack"><p class="small muted" id="lfNote">Việc liên kết không đồng nghĩa xác minh tọa độ hay nội dung lịch sử.</p>
-      <div class="field"><label for="ls2">Câu chuyện *</label><select id="ls2" name="story"></select><span class="msg"></span></div>
-      <div class="field"><label for="pl">Địa danh *</label><select id="pl" name="place"></select><span class="msg"></span></div>
-      <div class="field"><label for="nt">Ghi chú nội bộ</label><textarea id="nt" name="note" rows="2"></textarea></div>
-      <div class="actions"><button class="btn btn-ghost" type="reset" id="back">Quay lại</button><button class="btn" type="submit">Lưu liên kết</button></div></form></section></div>
-  <aside class="stack"><section class="card"><h2 class="panel-title">Địa danh liên kết</h2><div class="field pg-4"><label for="pq">Tìm địa danh</label><input id="pq" type="search" placeholder="Bát Tràng…"></div><div id="plist"></div></section><section class="card" id="unl"></section></aside>
-</div>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/curator-content-map.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bản đồ nội dung · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/curator-content-map.css" />
+  </head>
+  <body data-page="curator-content-map" data-space="curator" data-nav="map">
+    <main>
+      <div class="page-head">
+        <div>
+          <p class="eyebrow">LIÊN KẾT VĂN HÓA & ĐỊA DANH</p>
+          <h1>Bản đồ nội dung</h1>
+          <p class="lede">
+            Theo dõi nội dung đã có địa danh và bổ sung liên kết còn thiếu.
+          </p>
+        </div>
+      </div>
+      <div class="notice notice--warn">
+        <strong>Bản đồ sơ đồ minh họa</strong>
+        <p>
+          Không phải bản đồ địa lý thực tế. Điểm, tuyến và số lượng là dữ liệu
+          mẫu. Công cụ này chỉ mô phỏng việc quản lý liên kết nội dung.
+        </p>
+      </div>
+      <form class="filters mt pg-1" id="ff">
+        <div class="field">
+          <label for="reg">Khu vực</label
+          ><select id="reg">
+            <option value="">Tất cả</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="top">Chủ đề</label
+          ><select id="top">
+            <option value="">Tất cả</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ls">Trạng thái liên kết</label
+          ><select id="ls">
+            <option value="">Tất cả</option>
+            <option value="linked">Đã liên kết</option>
+            <option value="unlinked">Chưa có địa danh</option>
+          </select>
+        </div>
+        <button class="btn pg-2" type="submit">Áp dụng</button>
+      </form>
+      <div class="split mt pg-3">
+        <div class="stack">
+          <div id="map"></div>
+          <div class="legend" id="legend"></div>
+          <section class="card" id="sel" aria-live="polite"></section>
+          <section class="card" id="formCard">
+            <h2 class="panel-title">Liên kết / cập nhật địa danh</h2>
+            <form id="lf" novalidate class="form-stack">
+              <p class="small muted" id="lfNote">
+                Việc liên kết không đồng nghĩa xác minh tọa độ hay nội dung lịch
+                sử.
+              </p>
+              <div class="field">
+                <label for="ls2">Câu chuyện *</label
+                ><select id="ls2" name="story"></select
+                ><span class="msg"></span>
+              </div>
+              <div class="field">
+                <label for="pl">Địa danh *</label
+                ><select id="pl" name="place"></select
+                ><span class="msg"></span>
+              </div>
+              <div class="field">
+                <label for="nt">Ghi chú nội bộ</label
+                ><textarea id="nt" name="note" rows="2"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn btn-ghost" type="reset" id="back">
+                  Quay lại</button
+                ><button class="btn" type="submit">Lưu liên kết</button>
+              </div>
+            </form>
+          </section>
+        </div>
+        <aside class="stack">
+          <section class="card">
+            <h2 class="panel-title">Địa danh liên kết</h2>
+            <div class="field pg-4">
+              <label for="pq">Tìm địa danh</label
+              ><input id="pq" type="search" placeholder="Bát Tràng…" />
+            </div>
+            <div id="plist"></div>
+          </section>
+          <section class="card" id="unl"></section>
+        </aside>
+      </div>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/curator-content-map.js"></script>
+  </body>
 </html>

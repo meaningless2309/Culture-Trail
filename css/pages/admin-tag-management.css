@@ -1,16 +1,55 @@
 /* admin-tag-management.css — CSS riêng của trang admin-tag-management.html (thêm sau base/layout/components/responsive). */
 
-.tree details{margin-bottom:6px}
-.tree summary{font:600 16px var(--sans);color:var(--forest);cursor:pointer;padding:8px 0;list-style:none}
-.tree summary::after{content:' ▸';font-size:11px}
-.tree details[open]>summary::after{content:' ▾'}
-.tree summary::-webkit-details-marker{display:none}
-.tree .leaf-btn{display:block;width:100%;text-align:left;background:none;border:0;font:14px var(--sans);padding:8px 8px 8px 24px;cursor:pointer;color:var(--ink);border-radius:var(--r-ctl);min-height:36px}
-.tree .leaf-btn::before{content:'○ ';color:var(--forest)}
-.tree .leaf-btn[aria-pressed=true]{font-weight:600;background:var(--leaf)}
-.tree .leaf-btn[aria-pressed=true]::before{content:'● '}
+.tree details {
+  margin-bottom: 6px;
+}
+.tree summary {
+  font: 600 16px var(--sans);
+  color: var(--forest);
+  cursor: pointer;
+  padding: 8px 0;
+  list-style: none;
+}
+.tree summary::after {
+  content: " ▸";
+  font-size: 11px;
+}
+.tree details[open] > summary::after {
+  content: " ▾";
+}
+.tree summary::-webkit-details-marker {
+  display: none;
+}
+.tree .leaf-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  font: 14px var(--sans);
+  padding: 8px 8px 8px 24px;
+  cursor: pointer;
+  color: var(--ink);
+  border-radius: var(--r-ctl);
+  min-height: 36px;
+}
+.tree .leaf-btn::before {
+  content: "○ ";
+  color: var(--forest);
+}
+.tree .leaf-btn[aria-pressed="true"] {
+  font-weight: 600;
+  background: var(--leaf);
+}
+.tree .leaf-btn[aria-pressed="true"]::before {
+  content: "● ";
+}
 
 /* Lưu ý: các lớp pg-N / u-N được viết dạng .pg-N.pg-N để có độ ưu tiên ngang style inline cũ (thắng luật dùng chung). */
 /* Style từng nằm trực tiếp trong HTML / mẫu JS của trang */
-.pg-1.pg-1{grid-template-columns:300px minmax(0,1fr)} /* div.split */
-.pg-2.pg-2{padding-left:24px} /* span.small */
+.pg-1.pg-1 {
+  grid-template-columns: 300px minmax(0, 1fr);
+} /* div.split */
+.pg-2.pg-2 {
+  padding-left: 24px;
+} /* span.small */

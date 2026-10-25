@@ -1,29 +1,64 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bộ sưu tập câu chuyện · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/curator-collection-management.css">
-</head>
-<body data-page="curator-collection-management" data-space="curator" data-nav="collections">
-<main>
-<div class="page-head"><div><p class="eyebrow">BIÊN TẬP VĂN HÓA</p><h1>Bộ sưu tập câu chuyện</h1><p class="lede">Kết nối những nội dung đã duyệt thành các tuyến đọc có chủ đích.</p></div><a class="btn" href="curator-collection-editor.html">＋ Tạo bộ sưu tập</a></div>
-<div class="searchbar"><div class="field"><label class="sr-only" for="q">Tìm bộ sưu tập</label><input id="q" type="search" placeholder="⌕ Tìm bộ sưu tập…"></div><button class="link-btn" id="sort" type="button">Mới cập nhật ↓</button></div>
-<div class="tabs" id="tabs" role="tablist" aria-label="Lọc theo trạng thái"></div>
-<div id="list" aria-live="polite"></div>
-<div class="notice mt"><strong>Chỉ chọn nội dung đã duyệt</strong><p>Nếu một câu chuyện bị lưu trữ, hệ thống yêu cầu biên tập kiểm tra lại bộ sưu tập liên quan trước khi xuất bản phiên bản mới.</p></div>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/curator-collection-management.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bộ sưu tập câu chuyện · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/curator-collection-management.css" />
+  </head>
+  <body
+    data-page="curator-collection-management"
+    data-space="curator"
+    data-nav="collections"
+  >
+    <main>
+      <div class="page-head">
+        <div>
+          <p class="eyebrow">BIÊN TẬP VĂN HÓA</p>
+          <h1>Bộ sưu tập câu chuyện</h1>
+          <p class="lede">
+            Kết nối những nội dung đã duyệt thành các tuyến đọc có chủ đích.
+          </p>
+        </div>
+        <a class="btn" href="curator-collection-editor.html"
+          >＋ Tạo bộ sưu tập</a
+        >
+      </div>
+      <div class="searchbar">
+        <div class="field">
+          <label class="sr-only" for="q">Tìm bộ sưu tập</label
+          ><input id="q" type="search" placeholder="⌕ Tìm bộ sưu tập…" />
+        </div>
+        <button class="link-btn" id="sort" type="button">Mới cập nhật ↓</button>
+      </div>
+      <div
+        class="tabs"
+        id="tabs"
+        role="tablist"
+        aria-label="Lọc theo trạng thái"
+      ></div>
+      <div id="list" aria-live="polite"></div>
+      <div class="notice mt">
+        <strong>Chỉ chọn nội dung đã duyệt</strong>
+        <p>
+          Nếu một câu chuyện bị lưu trữ, hệ thống yêu cầu biên tập kiểm tra lại
+          bộ sưu tập liên quan trước khi xuất bản phiên bản mới.
+        </p>
+      </div>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/curator-collection-management.js"></script>
+  </body>
 </html>

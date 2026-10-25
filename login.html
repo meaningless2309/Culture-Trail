@@ -1,45 +1,104 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Đăng nhập · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/login.css">
-</head>
-<body data-page="login">
-<main>
-<div class="auth">
-  <div class="auth-art"><figure><div class="media"><img src="assets/images/lane.svg" alt="Ảnh minh họa: ngõ làng gạch đỏ với chum gốm trên mái"></div></figure>
-    <p class="cap">Trở lại với những câu chuyện còn dang dở.</p><p class="small muted">Bát Tràng · Ảnh minh họa cho thiết kế</p></div>
-  <div>
-    <p class="eyebrow">CHÀO MỪNG BẠN TRỞ LẠI</p>
-    <h1>Đăng nhập CultureTrail</h1>
-    <p class="lede">Lưu câu chuyện, nối những điểm đến và tiếp tục hành trình của bạn.</p>
-    <div id="alert" class="mt" aria-live="assertive"></div>
-    <form id="f" class="form-stack mt" novalidate>
-      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="username" placeholder="ten@example.com"><span class="msg"></span></div>
-      <div class="field"><label for="password">Mật khẩu</label><div class="pw"><input id="password" name="password" type="password" autocomplete="current-password"><button type="button" aria-pressed="false">Hiện mật khẩu</button></div><span class="msg"></span></div>
-      <div class="row between"><label class="check"><input type="checkbox" name="remember" checked> Ghi nhớ đăng nhập</label><a href="forgot-password.html" class="small pg-1">Quên mật khẩu?</a></div>
-      <button class="btn" type="submit" id="go">→ Đăng nhập</button>
-    </form>
-    <div class="notice mt"><strong>Một tài khoản, nhiều vai trò</strong><p>Sau khi đăng nhập, chọn không gian được cấp quyền trong menu tài khoản. Mặc định mở trang khám phá.</p></div>
-    <p class="mt">Chưa có tài khoản? <a href="register.html"><b>Đăng ký ngay →</b></a></p>
-    <details class="card mt small"><summary><b>Tài khoản mẫu để thử (mật khẩu: CultureTrail1)</b></summary>
-      <div class="chips mt" id="demo"></div></details>
-    <p class="small muted mt">Bằng việc tiếp tục, bạn đồng ý với Điều khoản sử dụng và Chính sách quyền riêng tư.</p>
-  </div>
-</div>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/login.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng nhập · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/login.css" />
+  </head>
+  <body data-page="login">
+    <main>
+      <div class="auth">
+        <div class="auth-art">
+          <figure>
+            <div class="media">
+              <img
+                src="assets/images/lane.svg"
+                alt="Ảnh minh họa: ngõ làng gạch đỏ với chum gốm trên mái"
+              />
+            </div>
+          </figure>
+          <p class="cap">Trở lại với những câu chuyện còn dang dở.</p>
+          <p class="small muted">Bát Tràng · Ảnh minh họa cho thiết kế</p>
+        </div>
+        <div>
+          <p class="eyebrow">CHÀO MỪNG BẠN TRỞ LẠI</p>
+          <h1>Đăng nhập CultureTrail</h1>
+          <p class="lede">
+            Lưu câu chuyện, nối những điểm đến và tiếp tục hành trình của bạn.
+          </p>
+          <div id="alert" class="mt" aria-live="assertive"></div>
+          <form id="f" class="form-stack mt" novalidate>
+            <div class="field">
+              <label for="email">Email</label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="username"
+                placeholder="ten@example.com"
+              /><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="password">Mật khẩu</label>
+              <div class="pw">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                /><button type="button" aria-pressed="false">
+                  Hiện mật khẩu
+                </button>
+              </div>
+              <span class="msg"></span>
+            </div>
+            <div class="row between">
+              <label class="check"
+                ><input type="checkbox" name="remember" checked /> Ghi nhớ đăng
+                nhập</label
+              ><a href="forgot-password.html" class="small pg-1"
+                >Quên mật khẩu?</a
+              >
+            </div>
+            <button class="btn" type="submit" id="go">→ Đăng nhập</button>
+          </form>
+          <div class="notice mt">
+            <strong>Một tài khoản, nhiều vai trò</strong>
+            <p>
+              Sau khi đăng nhập, chọn không gian được cấp quyền trong menu tài
+              khoản. Mặc định mở trang khám phá.
+            </p>
+          </div>
+          <p class="mt">
+            Chưa có tài khoản? <a href="register.html"><b>Đăng ký ngay →</b></a>
+          </p>
+          <details class="card mt small">
+            <summary>
+              <b>Tài khoản mẫu để thử (mật khẩu: CultureTrail1)</b>
+            </summary>
+            <div class="chips mt" id="demo"></div>
+          </details>
+          <p class="small muted mt">
+            Bằng việc tiếp tục, bạn đồng ý với Điều khoản sử dụng và Chính sách
+            quyền riêng tư.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/login.js"></script>
+  </body>
 </html>

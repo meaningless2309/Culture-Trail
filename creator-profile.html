@@ -1,42 +1,115 @@
 <!doctype html>
 <html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hồ sơ nhà sáng tạo · CultureTrail</title>
-<meta name="description" content="CultureTrail — khám phá văn hóa theo câu chuyện.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/pages/creator-profile.css">
-</head>
-<body data-page="creator-profile" data-space="creator" data-nav="profile">
-<main>
-<div class="page-head"><div><p class="eyebrow">HỒ SƠ NHÀ SÁNG TẠO</p><h1 id="nm"></h1><p class="lede" id="sub"></p></div><button class="btn" id="pub" type="button">＋ Xem hồ sơ công khai</button></div>
-<div class="split pg-1">
-  <div id="side"></div>
-  <form class="card" id="f" novalidate aria-labelledby="fh"><h2 id="fh" class="panel-title">Chỉnh sửa hồ sơ</h2>
-    <div class="form-grid">
-      <div class="field"><label for="name">Tên hiển thị *</label><input id="name" name="name"><span class="msg"></span></div>
-      <div class="field"><label for="field">Lĩnh vực *</label><select id="field" name="field"><option value="">Chọn lĩnh vực</option><option>Nghề gốm</option><option>Đan lát</option><option>Đèn lồng</option><option>Dệt & lụa</option><option>Tre trúc</option><option>Di sản</option><option>Ẩm thực</option></select><span class="msg"></span></div>
-      <div class="field full"><label for="placeId">Địa danh liên kết</label><select id="placeId" name="placeId"></select></div>
-      <div class="field full"><label for="bio">Giới thiệu *</label><textarea id="bio" name="bio" rows="4" maxlength="500"></textarea><span class="hint">Tối đa 500 ký tự.</span><span class="msg"></span></div>
-      <div class="field"><label for="publicEmail">Liên hệ công khai</label><input id="publicEmail" name="publicEmail" type="email"><span class="msg"></span></div>
-      <div class="field"><label for="website">Trang giới thiệu</label><input id="website" name="website" type="url" placeholder="https://"><span class="msg"></span></div>
-      <label class="check full"><input type="checkbox" name="showEmail"> Cho phép hiển thị email liên hệ trên hồ sơ công khai</label>
-    </div>
-    <div class="actions"><button class="btn" type="submit">Lưu hồ sơ</button><button class="btn btn-ghost" type="button" id="cancel">Hủy thay đổi</button></div></form>
-</div>
-<section class="section" aria-labelledby="hg"><h2 class="pg-2" id="hg">Những sản phẩm từ đôi tay</h2><div id="gal" class="grid g3"></div>
-  <p class="mt"><button class="link-btn" id="addImg" type="button">Thêm ảnh tác phẩm</button> <span class="small muted">JPG, PNG · tối đa 1 MB trong bản demo</span></p><input type="file" id="file" accept="image/jpeg,image/png" hidden></section>
-<section class="section" aria-labelledby="hs"><h2 class="pg-2" id="hs">Câu chuyện đã xuất bản</h2><div class="split pg-3"><div id="sto" class="grid g1"></div><div id="evs"></div></div></section>
-</main>
-<script src="assets/data/seed.js"></script>
-<script src="js/api.js"></script>
-<script src="js/modules/ui.js"></script>
-<script src="js/modules/ai.js"></script>
-<script src="js/main.js"></script>
-<script src="js/pages/creator-profile.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hồ sơ nhà sáng tạo · CultureTrail</title>
+    <meta
+      name="description"
+      content="CultureTrail — khám phá văn hóa theo câu chuyện."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/pages/creator-profile.css" />
+  </head>
+  <body data-page="creator-profile" data-space="creator" data-nav="profile">
+    <main>
+      <div class="page-head">
+        <div>
+          <p class="eyebrow">HỒ SƠ NHÀ SÁNG TẠO</p>
+          <h1 id="nm"></h1>
+          <p class="lede" id="sub"></p>
+        </div>
+        <button class="btn" id="pub" type="button">
+          ＋ Xem hồ sơ công khai
+        </button>
+      </div>
+      <div class="split pg-1">
+        <div id="side"></div>
+        <form class="card" id="f" novalidate aria-labelledby="fh">
+          <h2 id="fh" class="panel-title">Chỉnh sửa hồ sơ</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Tên hiển thị *</label
+              ><input id="name" name="name" /><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="field">Lĩnh vực *</label
+              ><select id="field" name="field">
+                <option value="">Chọn lĩnh vực</option>
+                <option>Nghề gốm</option>
+                <option>Đan lát</option>
+                <option>Đèn lồng</option>
+                <option>Dệt & lụa</option>
+                <option>Tre trúc</option>
+                <option>Di sản</option>
+                <option>Ẩm thực</option></select
+              ><span class="msg"></span>
+            </div>
+            <div class="field full">
+              <label for="placeId">Địa danh liên kết</label
+              ><select id="placeId" name="placeId"></select>
+            </div>
+            <div class="field full">
+              <label for="bio">Giới thiệu *</label
+              ><textarea id="bio" name="bio" rows="4" maxlength="500"></textarea
+              ><span class="hint">Tối đa 500 ký tự.</span
+              ><span class="msg"></span>
+            </div>
+            <div class="field">
+              <label for="publicEmail">Liên hệ công khai</label
+              ><input id="publicEmail" name="publicEmail" type="email" /><span
+                class="msg"
+              ></span>
+            </div>
+            <div class="field">
+              <label for="website">Trang giới thiệu</label
+              ><input
+                id="website"
+                name="website"
+                type="url"
+                placeholder="https://"
+              /><span class="msg"></span>
+            </div>
+            <label class="check full"
+              ><input type="checkbox" name="showEmail" /> Cho phép hiển thị
+              email liên hệ trên hồ sơ công khai</label
+            >
+          </div>
+          <div class="actions">
+            <button class="btn" type="submit">Lưu hồ sơ</button
+            ><button class="btn btn-ghost" type="button" id="cancel">
+              Hủy thay đổi
+            </button>
+          </div>
+        </form>
+      </div>
+      <section class="section" aria-labelledby="hg">
+        <h2 class="pg-2" id="hg">Những sản phẩm từ đôi tay</h2>
+        <div id="gal" class="grid g3"></div>
+        <p class="mt">
+          <button class="link-btn" id="addImg" type="button">
+            Thêm ảnh tác phẩm
+          </button>
+          <span class="small muted">JPG, PNG · tối đa 1 MB trong bản demo</span>
+        </p>
+        <input type="file" id="file" accept="image/jpeg,image/png" hidden />
+      </section>
+      <section class="section" aria-labelledby="hs">
+        <h2 class="pg-2" id="hs">Câu chuyện đã xuất bản</h2>
+        <div class="split pg-3">
+          <div id="sto" class="grid g1"></div>
+          <div id="evs"></div>
+        </div>
+      </section>
+    </main>
+    <script src="assets/data/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/ai.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages/creator-profile.js"></script>
+  </body>
 </html>
