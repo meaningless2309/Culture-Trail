@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" role="img" aria-labelledby="title desc">
+  <title id="title">Hành trình khám phá văn hóa Việt</title>
+  <desc id="desc">Minh họa phố cổ, mái nhà làng nghề, đèn lồng và con đường uốn lượn qua đồng quê.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9d9bc"/>
+      <stop offset="1" stop-color="#f5ead6"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cf9a63"/>
+      <stop offset="1" stop-color="#b96843"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="720" fill="url(#sky)"/>
+  <circle cx="484" cy="142" r="55" fill="#d99558"/>
+  <path d="M0 365c102-44 172-43 269-6 111 42 233 30 371-29v390H0z" fill="#77866a"/>
+  <path d="M0 428c112-46 188-38 285 1 112 45 218 34 355-19v310H0z" fill="#9c9c70"/>
+  <path d="M0 514c110-36 205-28 302 9 107 41 217 35 338-3v200H0z" fill="#63795f"/>
+  <path d="M272 720c23-104 86-162 97-229 10-59-20-93-37-135-16-39-15-82 7-122 21 39 50 68 73 108 35 62 39 119 17 173-26 62-92 104-104 205z" fill="url(#path)"/>
+  <path d="M319 720c23-104 86-162 97-229 10-59-20-93-37-135" fill="none" stroke="#e5bd87" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+  <g fill="#a85e43">
+    <path d="M38 369v-82l54-43 54 43v82z"/>
+    <path d="M26 289l66-53 66 53h-22l-44-34-44 34z" fill="#744a3b"/>
+    <path d="M420 355v-96l65-49 65 49v96z"/>
+    <path d="M406 267l79-61 79 61h-26l-53-41-53 41z" fill="#744a3b"/>
+    <path d="M512 357v-68l47-35 47 35v68z" fill="#c37b4b"/>
+    <path d="M500 294l59-46 59 46h-20l-39-30-39 30z" fill="#744a3b"/>
+  </g>
+  <g fill="#f0d6a8">
+    <rect x="63" y="301" width="17" height="25" rx="2"/>
+    <rect x="103" y="301" width="17" height="25" rx="2"/>
+    <rect x="448" y="274" width="20" height="29" rx="2"/>
+    <rect x="493" y="274" width="20" height="29" rx="2"/>
+    <rect x="539" y="300" width="14" height="22" rx="2"/>
+    <rect x="574" y="300" width="14" height="22" rx="2"/>
+  </g>
+  <g stroke="#576d56" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M0 473c41-47 79-47 120 0M18 473c25-29 49-29 74 0M520 457c34-41 68-41 102 0M545 457c22-26 43-26 65 0"/>
+  </g>
+  <g transform="translate(248 210)">
+    <path d="M0 0v34M0 34h47" stroke="#76523f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M0 40c-27 18-28 53 0 70 28-17 27-52 0-70z" fill="#b9573d"/>
+    <path d="M0 47v54" stroke="#efc78d" stroke-width="4"/>
+    <path d="M-8 110h16" stroke="#76523f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(346 275)">
+    <path d="M0 0v26M0 26h39" stroke="#76523f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M0 32c-22 15-22 43 0 57 22-14 22-42 0-57z" fill="#bd7747"/>
+    <path d="M0 38v44" stroke="#f1d2a1" stroke-width="3"/>
+    <path d="M-7 94h14" stroke="#76523f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g fill="#e4c18d" opacity=".9">
+    <circle cx="181" cy="420" r="5"/>
+    <circle cx="203" cy="405" r="4"/>
+    <circle cx="389" cy="446" r="5"/>
+    <circle cx="417" cy="429" r="4"/>
+    <circle cx="146" cy="535" r="5"/>
+    <circle cx="478" cy="535" r="5"/>
+  </g>
+</svg>

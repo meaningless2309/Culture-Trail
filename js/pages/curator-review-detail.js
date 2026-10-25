@@ -80,6 +80,7 @@ CT.ready(() => {
     const cl = CT.$("#claim");
     if (cl)
       cl.onclick = async () => {
+        cl.disabled = true;
         try {
           await CT.api.run(() =>
             CT.db.update("stories", id, (x) => {
@@ -93,6 +94,7 @@ CT.ready(() => {
           );
           load();
         } catch (e) {
+          cl.disabled = false;
           CT.ui.toast("Không thể nhận bài lúc này.", "err");
         }
       };
@@ -282,8 +284,22 @@ CT.ready(() => {
       <div class="actions"><button class="btn" type="button" id="ok" ${act ? "" : "disabled"}>Duyệt & xuất bản</button></div><div class="actions pg-11"><button class="link-btn" type="button" id="rv" ${act ? "" : "disabled"}>Yêu cầu chỉnh sửa</button><button class="link-btn danger" type="button" id="rj" ${act ? "" : "disabled"}>Từ chối nội dung</button></div></form>`;
     if (!act) return;
     const f = CT.$("#df");
-    const back = (kind) => {
+    let busy = false,
+      leaving = false;
+    const setBusy = (value) => {
+      f.querySelectorAll("button, input, textarea").forEach((control) => {
+        control.disabled = value;
+      });
+    };
+    const unlock = () => {
+      if (!leaving) {
+        busy = false;
+        setBusy(false);
+      }
+    };
+    const back = async (kind) => {
       if (
+        busy ||
         !CT.ui.validate(f, {
           rs: (v) =>
             v.trim()
@@ -295,61 +311,61 @@ CT.ready(() => {
         })
       )
         return;
-      CT.ui
-        .confirm({
+      busy = true;
+      setBusy(true);
+      try {
+        const confirmed = await CT.ui.confirm({
           title:
             kind === "revise" ? "Gửi yêu cầu chỉnh sửa?" : "Từ chối nội dung?",
           text: "Phản hồi của bạn sẽ được gửi tới tác giả và lưu trong lịch sử.",
           confirm: kind === "revise" ? "Gửi yêu cầu" : "Từ chối",
           danger: kind === "reject",
-        })
-        .then(async (r) => {
-          if (!r) return;
-          const now = new Date().toISOString();
-          try {
-            await CT.api.run(() => {
-              CT.db.update("stories", id, (x) => {
-                x.status = "rejected";
-                x.assignee = null;
-                x.feedback = (x.feedback || []).concat({
-                  at: now,
-                  by: me.name,
-                  kind,
-                  text: f.rs.value.trim(),
-                });
-                x.history = (x.history || []).concat({
-                  at: now,
-                  text: `${me.name} ${kind === "revise" ? "yêu cầu chỉnh sửa" : "từ chối nội dung"}`,
-                });
-              });
-              CT.notify(s.creatorId, {
-                type: "content",
-                title: `Câu chuyện “${s.title}” ${kind === "revise" ? "cần chỉnh sửa" : "chưa được duyệt"}`,
-                body: f.rs.value.trim(),
-                link: "creator-story-editor.html?id=" + s.id,
-                linkLabel: "Mở phản hồi",
-              });
-            });
-            CT.ui.toast(
-              kind === "revise"
-                ? "Đã gửi yêu cầu chỉnh sửa cho tác giả."
-                : "Đã từ chối nội dung và gửi phản hồi.",
-            );
-            setTimeout(
-              () => (location.href = "curator-content-review.html"),
-              700,
-            );
-          } catch (e) {
-            CT.ui.toast(
-              "Không thể xử lý lúc này. Dữ liệu bạn đã nhập được giữ lại.",
-              "err",
-            );
-          }
         });
+        if (!confirmed) return;
+        const now = new Date().toISOString();
+        await CT.api.run(() => {
+          CT.db.update("stories", id, (x) => {
+            x.status = "rejected";
+            x.assignee = null;
+            x.feedback = (x.feedback || []).concat({
+              at: now,
+              by: me.name,
+              kind,
+              text: f.rs.value.trim(),
+            });
+            x.history = (x.history || []).concat({
+              at: now,
+              text: `${me.name} ${kind === "revise" ? "yêu cầu chỉnh sửa" : "từ chối nội dung"}`,
+            });
+          });
+          CT.notify(s.creatorId, {
+            type: "content",
+            title: `Câu chuyện “${s.title}” ${kind === "revise" ? "cần chỉnh sửa" : "chưa được duyệt"}`,
+            body: f.rs.value.trim(),
+            link: "creator-story-editor.html?id=" + s.id,
+            linkLabel: "Mở phản hồi",
+          });
+        });
+        CT.ui.toast(
+          kind === "revise"
+            ? "Đã gửi yêu cầu chỉnh sửa cho tác giả."
+            : "Đã từ chối nội dung và gửi phản hồi.",
+        );
+        leaving = true;
+        setTimeout(() => (location.href = "curator-content-review.html"), 700);
+      } catch (e) {
+        CT.ui.toast(
+          "Không thể xử lý lúc này. Dữ liệu bạn đã nhập được giữ lại.",
+          "err",
+        );
+      } finally {
+        unlock();
+      }
     };
     CT.$("#rv").onclick = () => back("revise");
     CT.$("#rj").onclick = () => back("reject");
-    CT.$("#ok").onclick = () => {
+    CT.$("#ok").onclick = async () => {
+      if (busy) return;
       const miss = [];
       if (!f.c1.checked) miss.push("đọc nội dung và nguồn");
       if (!f.c2.checked) miss.push("xác nhận địa danh phù hợp");
@@ -379,49 +395,48 @@ CT.ready(() => {
         );
         return;
       }
-      CT.ui
-        .dialog({
+      busy = true;
+      setBusy(true);
+      try {
+        const confirmed = await CT.ui.dialog({
           title: "Xác nhận duyệt?",
           html: `<p class="muted">Nội dung phiên bản ${s.version} và các thẻ đã chọn (${applied.length}) sẽ công khai. Chỉ xác nhận sau khi hoàn thành kiểm tra nguồn.</p>`,
           actions: [
             { label: "Quay lại", value: null, cls: "btn-ghost" },
             { label: "Xác nhận xuất bản", value: "ok" },
           ],
-        })
-        .then(async (r) => {
-          if (!r) return;
-          const now = new Date().toISOString();
-          try {
-            await CT.api.run(() => {
-              CT.db.update("stories", id, (x) => {
-                x.status = "approved";
-                x.live = true;
-                x.assignee = null;
-                delete x.liveSnapshot;
-                x.approvedAt = now;
-                x.updatedAt = now;
-                x.history = (x.history || []).concat({
-                  at: now,
-                  text: `${me.name} duyệt & xuất bản phiên bản ${x.version}`,
-                });
-              });
-              CT.notify(s.creatorId, {
-                type: "content",
-                title: `“${s.title}” đã được duyệt`,
-                body: "Câu chuyện của bạn đã xuất bản và có thể được tìm thấy trong Khám phá.",
-                link: "explorer-story-detail.html?id=" + s.id,
-                linkLabel: "Xem câu chuyện",
-              });
-            });
-            CT.ui.toast("Đã duyệt & xuất bản.");
-            setTimeout(
-              () => (location.href = "curator-content-review.html"),
-              700,
-            );
-          } catch (e) {
-            CT.ui.toast("Không thể xuất bản lúc này. Hãy thử lại.", "err");
-          }
         });
+        if (!confirmed) return;
+        const now = new Date().toISOString();
+        await CT.api.run(() => {
+          CT.db.update("stories", id, (x) => {
+            x.status = "approved";
+            x.live = true;
+            x.assignee = null;
+            delete x.liveSnapshot;
+            x.approvedAt = now;
+            x.updatedAt = now;
+            x.history = (x.history || []).concat({
+              at: now,
+              text: `${me.name} duyệt & xuất bản phiên bản ${x.version}`,
+            });
+          });
+          CT.notify(s.creatorId, {
+            type: "content",
+            title: `“${s.title}” đã được duyệt`,
+            body: "Câu chuyện của bạn đã xuất bản và có thể được tìm thấy trong Khám phá.",
+            link: "explorer-story-detail.html?id=" + s.id,
+            linkLabel: "Xem câu chuyện",
+          });
+        });
+        CT.ui.toast("Đã duyệt & xuất bản.");
+        leaving = true;
+        setTimeout(() => (location.href = "curator-content-review.html"), 700);
+      } catch (e) {
+        CT.ui.toast("Không thể xuất bản lúc này. Hãy thử lại.", "err");
+      } finally {
+        unlock();
+      }
     };
   };
   load();

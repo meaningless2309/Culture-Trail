@@ -3,7 +3,7 @@
 | Bộ kiểm thử | Nội dung | Kết quả |
 |---|---|---|
 | `tests/smoke.py` | mở 27 trang đúng vai trò, bắt `pageerror` + lỗi console | 27/27 không lỗi |
-| `tests/flows.py` | 58 kiểm tra nghiệp vụ: phân quyền 401/403, đăng nhập/đăng ký, tìm/lọc, gửi duyệt → nhận bài → AI thẻ → duyệt, bản công khai giữ nguyên khi sửa, kiểm tra lịch/sức chứa sự kiện, hủy có lý do, hành trình (đổi thứ tự, lưu, xóa có xác nhận), 3 trạng thái AI + lỗi mạng, gộp thẻ, bảo vệ quản trị viên cuối, vô hiệu hóa, thông báo, liên kết địa danh, bộ sưu tập phiên bản | 58/58 đạt |
+| `tests/flows.py` | 58 kiểm tra nghiệp vụ hiện có và 4 kiểm tra hồi quy mới cho khóa thao tác lặp khi nhận bài / quyết định biên tập | 58 kiểm tra cũ đã đạt; 4 kiểm tra mới chưa chạy trong môi trường hiện tại |
 | `tests/layout_a11y.py` | không tràn ngang ở 390px; ảnh có `alt`, ô nhập có nhãn, 1 `h1`/trang, không trùng `id`, có `lang` | không có vấn đề thật (một số cảnh báo “nút rỗng” là dương tính giả do menu `<details>` đóng) |
 
 Chạy lại: `pip install playwright && playwright install chromium && sh tests/run.sh flows.py`
