@@ -64,10 +64,10 @@ docs/                 kiểm kê màn hình, vai trò & tính năng, báo cáo A
 
 ## Figma, Github, Video OBS:
 
-Những mục sau là **hoạt động của nhóm**, không thể sinh trong mã nguồn:
 - FIGMA: https://www.figma.com/design/WdIYXfLxl9EuLsQL4P2Nmv/CultureTrail?node-id=0-1&t=VLdekIJDp00kvEKn-1
 - Github: https://github.com/meaningless2309/Culture-Trail
 - Video OBS:
+  
   Vũ Việt Hưng:
   
   
@@ -76,7 +76,6 @@ Những mục sau là **hoạt động của nhóm**, không thể sinh trong m�
   
   Trần Quang Khải:
   
-
 
 Giới hạn kỹ thuật cần biết:
 
