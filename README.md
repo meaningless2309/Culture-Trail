@@ -71,7 +71,7 @@ docs/                 kiểm kê màn hình, vai trò & tính năng, báo cáo A
   Vũ Việt Hưng:
   
   
-  Nguyễn Duy Hải:
+  Nguyễn Duy Hải:  https://www.youtube.com/playlist?list=PLcZNdENtIP74
 
   
   Trần Quang Khải:
