@@ -74,7 +74,7 @@ docs/                 kiểm kê màn hình, vai trò & tính năng, báo cáo A
   Nguyễn Duy Hải:  https://www.youtube.com/playlist?list=PLcZNdENtIP74
 
   
-  Trần Quang Khải: https://www.youtube.com/playlist?list=PLAKSRuZI2PZY
+  Trần Quang Khải: https://youtube.com/playlist?list=PLVxhXJ99bNLk&si=McubessCepnsoLkE
   
 
 Giới hạn kỹ thuật cần biết:
