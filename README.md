@@ -52,7 +52,7 @@ docs/                 kiểm kê màn hình, vai trò & tính năng, báo cáo A
 
 ## Phạm vi đã làm
 
-- **25 màn hình desktop** theo bảng kiểm kê (SV1: 12, SV2: 5, SV3: 8) + `403.html`, `404.html`.
+- **27 màn hình desktop** theo bảng kiểm kê (SV1: 9, SV2: 9, SV3: 9) + `403.html`, `404.html`.
 - **Responsive** cho toàn bộ trang. 6 màn hình di động trong kiểm kê (`*-mobile.html`) được thể hiện bằng **cùng tệp HTML** qua CSS responsive (không tạo 6 tệp riêng): chi tiết duyệt chia tab *Nội dung / Nguồn & AI*, bảng chuyển thành thẻ, điểm dừng dùng ↑ ↓.
 - **3 tính năng AI** đúng quy trình *đầu vào → kiểm tra → xử lý → kết quả & giải thích → chấp nhận/sửa/từ chối/tạo lại → lưu*:
   - AI-1 gợi ý thẻ (Biên tập) — chỉ dùng danh mục có sẵn, không tự duyệt/tự gán.
