@@ -68,7 +68,7 @@ docs/                 kiểm kê màn hình, vai trò & tính năng, báo cáo A
 - Github: https://github.com/meaningless2309/Culture-Trail
 - Video OBS:
   
-  Vũ Việt Hưng:
+  Vũ Việt Hưng:  https://www.youtube.com/watch?v=MgTkndE0zxY&list=PLDsaOSPbAI_w&pp=sAgC
   
   
   Nguyễn Duy Hải:  https://www.youtube.com/playlist?list=PLcZNdENtIP74
